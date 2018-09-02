@@ -2,7 +2,7 @@ SOC_FAMILY = "bcm7362"
 
 require gigablue-mips.inc
 
-MACHINE_FEATURES += "gbsoftwol directfb osdanimation blindscan-dvbs"
+MACHINE_FEATURES += "gbsoftwol osdanimation blindscan-dvbs"
 
 ### Logitech keyboard ###
 KERNEL_MODULE_AUTOLOAD += "hid-logitech"
