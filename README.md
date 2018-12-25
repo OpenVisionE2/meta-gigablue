@@ -1,2 +1,2 @@
 # meta-gb
-GigaBlue BSP layer for PLi's OE
+GigaBlue BSP layer for Open Vision
