@@ -27,7 +27,7 @@ MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
 MACHINE_EXTRA_RRECOMMENDS += "\
     gstreamer1.0-plugin-dvbmediasink \
     gstreamer1.0-libav \
-    gigablue-cfe \
+    ${@bb.utils.contains("MACHINE_FEATURES", "hisi", "" , "gigablue-cfe", d)} \
     "
 
 include conf/machine/include/autoload-filesystems.inc
