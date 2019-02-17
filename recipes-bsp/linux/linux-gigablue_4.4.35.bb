@@ -26,6 +26,7 @@ RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
 SRC_URI += "http://source.mynonpublic.com/gigablue/mv200/gigablue-linux-${PV}-${SRCDATE}.tar.gz \
     file://defconfig \
+    file://0001-remote.patch \
     file://findkerneldevice.py \
 "
 
