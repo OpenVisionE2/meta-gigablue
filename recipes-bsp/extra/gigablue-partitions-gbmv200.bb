@@ -9,11 +9,14 @@ COMPATIBLE_MACHINE = "gbtrio4k"
 
 inherit deploy
 
-SRCDATE = "20190126"
+SRCDATE = "20190307"
 
 S = "${WORKDIR}/patitions"
 
 SRC_URI = "http://source.mynonpublic.com/gigablue/mv200/gbmv200-partitions-${SRCDATE}.zip"
+
+SRC_URI[md5sum] = "c5279247b450a4834a9af9f6c7f0eef8"
+SRC_URI[sha256sum] = "03700e0e37861f88297151d4689cff9b2627469da4b3f5411ff53658235ff128"
 
 ALLOW_EMPTY_${PN} = "1"
 do_configure[nostamp] = "1"
@@ -40,8 +43,5 @@ do_deploy() {
 }
 
 addtask deploy before do_build after do_install
-
-SRC_URI[md5sum] = "1108d557dfbf7d328dd40ed1bf6abcaa"
-SRC_URI[sha256sum] = "4c12069ee09f2fb74b5d68ac242cec080bcfb76585b60faad8c23447287502c2"
 
 INSANE_SKIP_${PN} += "already-stripped"
