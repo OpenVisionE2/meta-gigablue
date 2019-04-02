@@ -9,14 +9,14 @@ COMPATIBLE_MACHINE = "gbtrio4k"
 
 inherit deploy
 
-SRCDATE = "20190307"
+SRCDATE = "20190402"
 
 S = "${WORKDIR}/patitions"
 
 SRC_URI = "http://source.mynonpublic.com/gigablue/mv200/gbmv200-partitions-${SRCDATE}.zip"
 
-SRC_URI[md5sum] = "c5279247b450a4834a9af9f6c7f0eef8"
-SRC_URI[sha256sum] = "03700e0e37861f88297151d4689cff9b2627469da4b3f5411ff53658235ff128"
+SRC_URI[md5sum] = "1fb4be1f0afa11dc19b656f3f1719c1f"
+SRC_URI[sha256sum] = "0ef0f75742eb8b4ac9ce392f4b88d9db3123df2723a038e19b01a5dcf358f6c9"
 
 ALLOW_EMPTY_${PN} = "1"
 do_configure[nostamp] = "1"
