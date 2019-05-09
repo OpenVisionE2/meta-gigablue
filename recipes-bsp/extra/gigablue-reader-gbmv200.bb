@@ -8,14 +8,14 @@ RDEPENDS_${PN} = "libsdl"
 
 COMPATIBLE_MACHINE = "gbtrio4k"
 
-SRCDATE = "20190415"
+SRCDATE = "20190508"
 
 PV = "${SRCDATE}"
 
 SRC_URI = "http://source.mynonpublic.com/gigablue/mv200/gbmv200-libreader-${SRCDATE}.tar.gz"
 
-SRC_URI[md5sum] = "af943bd4add908538c0ed38795f685a2"
-SRC_URI[sha256sum] = "3f9e6207633d16240e5b65010a2ae89b0cce817022e41bac8ba7a2a2fdadb671"
+SRC_URI[md5sum] = "acd828a91bd1dc905f7db1de66208865"
+SRC_URI[sha256sum] = "dd3972ce17be7f476a59a7af6fb53fc2ba26037a217d54c262de785041d1b2f9"
 
 S = "${WORKDIR}"
 
