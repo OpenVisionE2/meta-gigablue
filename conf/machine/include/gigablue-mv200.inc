@@ -9,6 +9,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     gigablue-dvb-modules-gbmv200 \
     gigablue-loadmodules-gbmv200 \ 
     gigablue-libs-gbmv200 \
+    gigablue-hihalt-gbmv200 \
     gigablue-reader-gbmv200 \
     gigablue-libreader-gbmv200 \
     gigablue-partitions-gbmv200 \
@@ -29,6 +30,7 @@ DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 PREFERRED_VERSION_linux-gigablue = "4.4.35"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "gigablue-blindscan-gbmv200"
 PREFERRED_RPROVIDER_showiframe = "gigablue-showiframe-gbmv200"
+PREFERRED_RPROVIDER_aio-grab = "gigablue-grab-gbmv200"
 PREFERRED_PROVIDER_virtual/enigma2-mediaservice ?= "enigma2-plugin-systemplugins-servicehisilicon"
 
 require conf/machine/include/tune-cortexa15.inc
