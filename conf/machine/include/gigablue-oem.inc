@@ -12,6 +12,13 @@ ROOTFS_FILE = "rootfs.bin"
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     gigablue-ddbootup \
     enigma2-plugin-systemplugins-vfdcontrol \
+    rtl8192cu \
+    firmware-rtl8192cu \
+    firmware-rtl8192cufw \
+    rtl8192eu \
+    firmware-rtl8192eu \
+    rtl8812au \
+    rtl8822bu \
     "
 
 DVBPROVIDER = "kernel"
