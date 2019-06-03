@@ -2,7 +2,7 @@ SOC_FAMILY = "bcm7358"
 
 require gigablue-mips.inc
 
-MACHINE_FEATURES += "videoenhancement gbsoftwol osdanimation smallflash"
+MACHINE_FEATURES += "videoenhancement gbsoftwol osdanimation"
 
 ### Logitech keyboard ###
 KERNEL_MODULE_AUTOLOAD += "hid-logitech"
