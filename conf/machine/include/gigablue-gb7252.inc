@@ -5,6 +5,12 @@ MACHINE_EXTRA_RRECOMMENDS = " \
     ntfs-3g \
 "
 
+MACHINE_FEATURES += "colorlcd gigabluelcd gigabluelcd220 mmc ci omb blindscan-dvbs blindscan-dvbc transcoding dvb-c"
+
+CHIPSET = "bcm7252s"
+
+SRCDATE_BOLT = "20181120"
+
 PREFERRED_VERSION_linux-gigablue = "4.1.20"
 PREFERRED_PROVIDER_virtual/kernel = "linux-gigablue"
 PREFERRED_PROVIDER_virtual/egl = "gb-v3ddriver-gb7252"
@@ -48,9 +54,4 @@ EXTRA_IMAGEDEPENDS = "\
 
 IMAGE_INSTALL_append += "\
     bluetoothsetup-gb7252 \
-    "
-
-OPTIONAL_BSP_ENIGMA2_PACKAGES = "\
-    enigma2-plugin-extensions-hbbtv-gb \
-    enigma2-plugin-extensions-chromium \
     "
