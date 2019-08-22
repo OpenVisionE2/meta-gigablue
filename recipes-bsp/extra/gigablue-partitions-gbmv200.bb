@@ -5,7 +5,7 @@ LICENSE = "CLOSED"
 require conf/license/license-close.inc
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "gbtrio4k"
+COMPATIBLE_MACHINE = "gbtrio4k|gbip4k"
 
 inherit deploy
 

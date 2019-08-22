@@ -3,6 +3,8 @@ MAINTAINER = "gigablue"
 
 require conf/license/license-gplv2.inc
 
+COMPATIBLE_MACHINE = "gbtrio4k|gbip4k"
+
 PV = "1.0"
 
 SRC_URI = "file://gigablue-loadmodules-gbmv200.sh"

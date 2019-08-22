@@ -6,7 +6,7 @@ MTD_ROOTFS = "mmcblk0p13"
 DISTRO_FEATURES_remove = "x11 wayland"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-    gigablue-dvb-modules-gbmv200 \
+    gigablue-dvb-modules-${MACHINE} \
     gigablue-loadmodules-gbmv200 \ 
     gigablue-libs-gbmv200 \
     gigablue-hihalt-gbmv200 \
