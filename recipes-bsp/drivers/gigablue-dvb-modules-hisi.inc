@@ -7,7 +7,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 PV = "${KV}+${SRCDATE}"
 
-SRC_URI = "http://source.mynonpublic.com/gigablue/mv200/gbmv200-hiko-${SRCDATE}.zip \
+SRC_URI = "http://source.mynonpublic.com/gigablue/mv200/${MACHINE}-hiko-${SRCDATE}.zip \
     file://modules \
 "
 
