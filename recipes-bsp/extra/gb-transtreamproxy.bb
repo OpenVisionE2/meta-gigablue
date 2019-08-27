@@ -50,9 +50,9 @@ pkg_postinst_${PN}() {
 #!/bin/sh
 if ! grep -qE '^#*\s*8002' $D${sysconfdir}/inetd.conf; then
 	if grep -qE "^#*\s*8003" $D${sysconfdir}/inetd.conf; then
-		sed -i "s#^\(\#*\s*8003\)#8002\t\tstream\ttcp6\tnowait\troot\t${bindir}/transtreamproxy\ttranstreamproxy\n\1#" $D${sysconfdir}/inetd.conf
+		sed -i "s#^\(\#*\s*8003\)#8002\t\tstream\ttcp6\tnowait\troot\t/usr/bin/transtreamproxy\ttranstreamproxy\n\1#" $D${sysconfdir}/inetd.conf
 	else
-	        echo -e "8002\t\tstream\ttcp6\tnowait\troot\t${bindir}/transtreamproxy\ttranstreamproxy" >> $D${sysconfdir}/inetd.conf
+	        echo -e "8002\t\tstream\ttcp6\tnowait\troot\t/usr/bin/transtreamproxy\ttranstreamproxy" >> $D${sysconfdir}/inetd.conf
 	fi
 	if [ -z "$D" -a -f "${sysconfdir}/init.d/inetd.busybox" ]; then
 		${sysconfdir}/init.d/inetd.busybox restart
