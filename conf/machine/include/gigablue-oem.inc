@@ -17,8 +17,8 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     firmware-rtl8192cufw \
     rtl8192eu \
     firmware-rtl8192eu \
-    rtl8812au \
-    rtl8822bu \
+    rt8812au \
+    rt8822bu \
     "
 
 DVBPROVIDER = "kernel"
