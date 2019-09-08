@@ -5,7 +5,7 @@ MACHINE_EXTRA_RRECOMMENDS = " \
     ntfs-3g \
 "
 
-MACHINE_FEATURES += "colorlcd gigabluelcd gigabluelcd220 mmc ci omb blindscan-dvbs blindscan-dvbc transcoding dvb-c"
+MACHINE_FEATURES += "colorlcd gigabluelcd gigabluelcd220 mmc ci omb blindscan-dvbs blindscan-dvbc transcoding dvb-c mountboot"
 
 CHIPSET = "bcm7252s"
 
