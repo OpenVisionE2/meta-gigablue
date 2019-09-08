@@ -41,7 +41,6 @@ MACHINE_EXTRA_RRECOMMENDS += "\
 
 include conf/machine/include/autoload-filesystems.inc
 
-PREFERRED_PROVIDER_virtual/transtreamproxy = "gb-transtreamproxy"
 PREFERRED_PROVIDER_virtual/kernel = "linux-gigablue"
 
 KERNEL_OUTPUT = "${KERNEL_IMAGETYPE}"
