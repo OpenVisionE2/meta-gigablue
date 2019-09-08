@@ -9,6 +9,8 @@ MACHINE_FEATURES += "colorlcd gigabluelcd gigabluelcd220 mmc ci omb blindscan-dv
 
 CHIPSET = "bcm7252s"
 
+MTD_BLACK  = "mmcblk0"
+
 SRCDATE_BOLT = "20181120"
 
 PREFERRED_VERSION_linux-gigablue = "4.1.20"
