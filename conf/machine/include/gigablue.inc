@@ -6,6 +6,6 @@ MACHINE_FEATURES_BACKFILL_CONSIDERED = "rtc"
 IMAGEVERSION := "${IMAGE_NAME}"
 IMAGEVERSION[vardepsexclude] = "DATE"
 
-MACHINE_FEATURES += "3dtv alsa hdmicec switchoff"
+MACHINE_FEATURES += "3dtv alsa hdmicec switchoff gigablue"
 
 BOX_BRAND = "gigablue"
