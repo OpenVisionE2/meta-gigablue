@@ -5,18 +5,18 @@ LICENSE = "CLOSED"
 require conf/license/license-close.inc
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "gbtrio4k"
+COMPATIBLE_MACHINE = "gbip4k"
 
 inherit deploy
 
-SRCDATE = "20190917"
+SRCDATE = "20191015"
 
 S = "${WORKDIR}/patitions"
 
-SRC_URI = "http://source.mynonpublic.com/gigablue/mv200/gbmv200-partitions-${SRCDATE}.zip"
+SRC_URI = "http://source.mynonpublic.com/gigablue/mv200/${MACHINE}-partitions-${SRCDATE}.zip"
 
-SRC_URI[md5sum] = "e38fd37a6bb15736fcb82bd7e87458ca"
-SRC_URI[sha256sum] = "b1c3c7e4773bc90bce1560f1757e88bd18ffb7893494ae015fae83fa06af4e64"
+SRC_URI[md5sum] = "e2bf231632c9bff32fac673f51ae9cfd"
+SRC_URI[sha256sum] = "592eafc759e60c44872cc1953218e576bf87d81cca6a48fdb9c86b0e948bf32e"
 
 ALLOW_EMPTY_${PN} = "1"
 do_configure[nostamp] = "1"

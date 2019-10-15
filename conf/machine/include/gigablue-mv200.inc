@@ -13,7 +13,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     gigablue-hihalt-gbmv200 \
     gigablue-reader-gbmv200 \
     gigablue-libreader-gbmv200 \
-    gigablue-partitions-gbmv200 \
     gigablue-buildimage \
     e2fsprogs-resize2fs \
     gptfdisk \
