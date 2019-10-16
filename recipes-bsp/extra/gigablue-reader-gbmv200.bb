@@ -6,7 +6,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 RDEPENDS_${PN} = "libsdl"
 
-COMPATIBLE_MACHINE = "gbtrio4k|gbip4k"
+COMPATIBLE_MACHINE = "^(gbtrio4k|gbip4k)$"
 
 SRCDATE = "20190907"
 

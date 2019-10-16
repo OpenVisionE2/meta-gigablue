@@ -7,4 +7,4 @@ SRC_URI = "http://source.mynonpublic.com/gigablue/blindscan/gigablue-blindscan-u
 SRC_URI[md5sum] = "8f21335991e83bdbea2d499b6710477a"
 SRC_URI[sha256sum] = "0e5d55a78b9b8b5dbcaa5462f12d1eb9337ecfd7aa36e42cc564170e7947b3fe"
 
-COMPATIBLE_MACHINE = "gbquad4k|gbue4k"
+COMPATIBLE_MACHINE = "^(gbquad4k|gbue4k)$"

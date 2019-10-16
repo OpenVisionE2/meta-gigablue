@@ -4,7 +4,7 @@ SECTION = "kernel"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "gbquad4k|gbue4k"
+COMPATIBLE_MACHINE = "^(gbquad4k|gbue4k)$"
 
 MODULE = "linux-4.1.20"
 

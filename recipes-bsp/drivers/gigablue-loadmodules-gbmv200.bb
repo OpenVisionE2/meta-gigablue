@@ -3,7 +3,7 @@ MAINTAINER = "gigablue"
 
 require conf/license/license-gplv2.inc
 
-COMPATIBLE_MACHINE = "gbtrio4k|gbip4k"
+COMPATIBLE_MACHINE = "^(gbtrio4k|gbip4k)$"
 
 PV = "1.0"
 

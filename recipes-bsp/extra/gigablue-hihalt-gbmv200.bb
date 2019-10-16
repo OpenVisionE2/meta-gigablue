@@ -5,7 +5,7 @@ LICENSE = "CLOSED"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "gbtrio4k|gbip4k"
+COMPATIBLE_MACHINE = "^(gbtrio4k|gbip4k)$"
 
 RDEPENDS_${PN} = "harfbuzz"
 

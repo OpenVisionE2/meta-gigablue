@@ -4,7 +4,7 @@ LICENSE = "GPLv2"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "gb800seplus|gb800ueplus|gbipbox|gbquad|gbquadplus|gbultrase|gbultraue|gbultraueh|gbx1|gbx2|gbx3|gbx3h"
+COMPATIBLE_MACHINE = "^(gb800seplus|gb800ueplus|gbipbox|gbquad|gbquadplus|gbultrase|gbultraue|gbultraueh|gbx1|gbx2|gbx3|gbx3h)$"
 
 inherit kernel machine_kernel_pr
 

@@ -2,7 +2,7 @@ SRCDATE = "20181130"
 
 KV = "4.8.3"
 
-COMPATIBLE_MACHINE = "gbultraueh|gbx2|gbx3h"
+COMPATIBLE_MACHINE = "^(gbultraueh|gbx2|gbx3h)$"
 
 SRC_URI[md5sum] = "5c7a080c7fa361f09720c7439798f682"
 SRC_URI[sha256sum] = "5de17f8de14e5a55e5489a4e63ca187315b0e98918a11f543651aa82827ad57f"
