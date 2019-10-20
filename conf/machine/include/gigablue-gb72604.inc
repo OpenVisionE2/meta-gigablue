@@ -5,20 +5,26 @@ MACHINE_EXTRA_RRECOMMENDS = " \
     ntfs-3g \
 "
 
+### Logitech keyboard ###
+KERNEL_MODULE_AUTOLOAD += "hid-logitech"
+KERNEL_MODULE_AUTOLOAD += "hid-logitech-dj"
+
+DVBSKYPROVIDER = "kernel"
+
 MACHINE_FEATURES += "bolt colorlcd gigabluelcd gigabluelcd220 mmc ci omb blindscan-dvbs blindscan-dvbc transcoding dvb-c mountboot bluetooth"
 
-CHIPSET = "bcm7252s"
+CHIPSET = "bcm72604"
 
 MTD_KERNEL = "mmcblk0p4"
 MTD_ROOTFS = "mmcblk0p5"
 MTD_BLACK  = "mmcblk0"
 
-SRCDATE_BOLT = "20181120"
+SRCDATE_BOLT = "20190926"
 
 PREFERRED_VERSION_linux-gigablue = "4.1.20"
 PREFERRED_PROVIDER_virtual/kernel = "linux-gigablue"
-PREFERRED_PROVIDER_virtual/egl = "gb-v3ddriver-gb7252"
-PREFERRED_PROVIDER_virtual/libgles2 = "gb-v3ddriver-gb7252"
+PREFERRED_PROVIDER_virtual/egl = "gb-v3ddriver-gb72604"
+PREFERRED_PROVIDER_virtual/libgles2 = "gb-v3ddriver-gb72604"
 
 PACKAGECONFIG_GL_pn-qtbase = " gles2 eglfs linuxfb"
 
@@ -42,13 +48,13 @@ IMAGE_CMD_tar_prepend = "\
 "
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS = " \
-    gigablue-platform-util-gb7252 \
+    gigablue-platform-util-gb72604 \
     gigablue-ddbootup \
     gigablue-swapcreate \
 "
 
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS = " \
-    gb-v3ddriver-gb7252 \
+    gb-v3ddriver-gb72604 \
     gb-qteglfs-platform \
     "
 
@@ -57,5 +63,5 @@ EXTRA_IMAGEDEPENDS = "\
     "
 
 IMAGE_INSTALL_append += "\
-    bluetoothsetup-gb7252 \
+    bluetoothsetup-gb72604 \
     "
