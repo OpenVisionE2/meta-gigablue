@@ -12,7 +12,7 @@ ROOTFS_FILE = "rootfs.bin"
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     gigablue-ddbootup \
     enigma2-plugin-systemplugins-vfdcontrol \
-    rtl8192cu \
+    kernel-module-rtl8192cu \
     firmware-rtl8192cu \
     firmware-rtl8192cufw \
     rtl8192eu \
