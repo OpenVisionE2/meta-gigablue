@@ -7,10 +7,10 @@ RPROVIDES_${PN} += "gb-bluetooth-util"
 PR="${SRCDATE}.${SRCDATE_PR}"
 
 SRC_URI = " \
-    http://source.mynonpublic.com/gigablue/bluetooth/gb-bluetooth-util-gb7252-${PR}.tar.gz \
+    http://source.mynonpublic.com/gigablue/bluetooth/gb-bluetooth-util-${GBPLATFORM}-${PR}.tar.gz \
 "
 
-S="${WORKDIR}/gb-bluetooth-util-gb7252"
+S="${WORKDIR}/gb-bluetooth-util-${GBPLATFORM}"
 
 do_package_qa() {
 }

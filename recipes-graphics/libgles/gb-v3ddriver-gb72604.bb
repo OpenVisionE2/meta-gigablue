@@ -1,5 +1,7 @@
 SRCDATE = "20191015.r0"
 
+GBPLATFORM = "gb72604"
+
 require gb-v3ddriver.inc
 
 SRC_URI[md5sum] = "27a19d7d5ea3712f365b08f08291adc0"

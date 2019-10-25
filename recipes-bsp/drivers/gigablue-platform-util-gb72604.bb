@@ -1,5 +1,7 @@
 require gigablue-platform-util.inc
 
+GBPLATFORM = "gb72604"
+
 SRCDATE = "20191015.r0"
 
 KV = "4.1.20"
