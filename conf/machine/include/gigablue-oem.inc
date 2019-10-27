@@ -47,7 +47,6 @@ KERNEL_OUTPUT = "${KERNEL_IMAGETYPE}"
 KERNEL_CONSOLE = "ttyS0,115200n8"
 
 MACHINE_FEATURES += "3dtv alsa hdmicec switchoff blindscan-tbs gigablue"
-#MACHINE_FEATURES += "bootsplash"
 
 BOOTLOGO_FILENAME = "splash.bin"
 

@@ -1,6 +1,6 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-SRC_URI_append_gbtrio4k = " \
+SRC_URI_append_gbtrio4k += " \
      file://libjpeg.so.62.2.0 \
 "
 
