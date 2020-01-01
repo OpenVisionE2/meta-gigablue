@@ -42,13 +42,14 @@ SRC_URI = "http://source.mynonpublic.com/gigablue/linux/gigablue-linux-${PV}-${S
     file://linux-3.9-gcc-4.9.3-build-error-fixed.patch \
     file://rtl8712-fix-warnings.patch \
     file://rtl8187se-fix-warnings.patch \
-    file://kernel-add-support-for-gcc6.patch \
     file://0001-Support-TBS-USB-drivers-3.9.patch \
     file://0001-STV-Add-PLS-support.patch \
     file://0001-STV-Add-SNR-Signal-report-parameters.patch \
     file://0001-stv090x-optimized-TS-sync-control.patch \
     file://blindscan2.patch \
     file://genksyms_fix_typeof_handling.patch \
+    file://0002-cp1emu-do-not-use-bools-for-arithmetic.patch \
+    file://0003-log2-give-up-on-gcc-constant-optimizations.patch \
     "
 
 S = "${WORKDIR}/linux-${KV}"

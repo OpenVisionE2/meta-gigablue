@@ -31,6 +31,8 @@ SRC_URI += "http://source.mynonpublic.com/gigablue/mv200/gigablue-linux-${PV}-${
     file://dib7000-linux_4.4.179.patch \
     file://dvb-usb-linux_4.4.179.patch \
     file://findkerneldevice.py \
+    file://0002-log2-give-up-on-gcc-constant-optimizations.patch \
+    file://0003-dont-mark-register-as-const.patch \
     file://wifi-linux_4.4.183.patch \
 "
 
