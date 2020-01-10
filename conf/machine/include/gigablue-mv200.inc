@@ -32,6 +32,7 @@ PREFERRED_PROVIDER_virtual/blindscan-dvbs = "gigablue-blindscan-gbmv200"
 PREFERRED_RPROVIDER_showiframe = "gigablue-showiframe-gbmv200"
 PREFERRED_RPROVIDER_aio-grab = "gigablue-grab-gbmv200"
 PREFERRED_PROVIDER_virtual/enigma2-mediaservice ?= "enigma2-plugin-systemplugins-servicehisilicon"
+PREFERRED_VERSION_ffmpeg = "3.4.2"
 
 require conf/machine/include/tune-cortexa15.inc
 
