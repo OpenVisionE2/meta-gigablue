@@ -28,4 +28,3 @@ do_install() {
 	install -m 0644 ${S}/bthid.ko ${D}/usr/local/lib/modules/bthid.ko
 }
 
-INSANE_SKIP_${PN} = "already-stripped"

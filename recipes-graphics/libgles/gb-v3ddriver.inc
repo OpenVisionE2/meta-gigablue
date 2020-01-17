@@ -34,4 +34,3 @@ FILES_${PN}-dev = "/usr/include/*"
 
 RPROVIDES_${PN} = "virtual/libgles2 virtual/egl libnexus.so libnxclient.so libnxpl.so libv3ddriver.so libGLESv2.so libEGL.so"
 
-INSANE_SKIP_${PN} += "already-stripped dev-so"
