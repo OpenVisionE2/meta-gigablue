@@ -17,6 +17,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
 SRC_URI += "http://source.mynonpublic.com/gigablue/linux/gigablue-linux-${PV}-20180206.tar.gz \
     file://defconfig \
+    file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc9.patch \
     file://gbfindkerneldevice.py \
     file://0002-linux_dvb-core.patch \
     file://0002-bcmgenet-recovery-fix.patch \
