@@ -1,5 +1,5 @@
 # We know about rtc
-include conf/machine/include/build-extras.inc
+require conf/machine/include/build-extras.inc
 
 BOX_BRAND = "gigablue"
 
@@ -39,7 +39,7 @@ MACHINE_EXTRA_RRECOMMENDS += "\
     ${@bb.utils.contains("MACHINE_FEATURES", "hisi", "" , "gigablue-cfe", d)} \
     "
 
-include conf/machine/include/autoload-filesystems.inc
+require conf/machine/include/autoload-filesystems.inc
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-gigablue"
 
