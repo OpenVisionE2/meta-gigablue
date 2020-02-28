@@ -6,16 +6,9 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 RDEPENDS_${PN} = "libsdl"
 
-COMPATIBLE_MACHINE = "^(gbtrio4k|gbip4k)$"
-
-SRCDATE = "20190907"
-
 PV = "${SRCDATE}"
 
-SRC_URI = "http://source.mynonpublic.com/gigablue/mv200/gbmv200-libreader-${SRCDATE}.tar.gz"
-
-SRC_URI[md5sum] = "ed55ac214c7f4f294db1a15c0a2612d6"
-SRC_URI[sha256sum] = "48d357a723674a1c72f5870f57bea3c9399dde51bf869ad1a553fc53300b1b67"
+SRC_URI = "http://source.mynonpublic.com/gigablue/mv200/${MACHINE}-libreader-${SRCDATE}.tar.gz"
 
 S = "${WORKDIR}"
 
