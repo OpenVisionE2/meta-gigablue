@@ -11,7 +11,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     gigablue-loadmodules-gbmv200 \ 
     gigablue-libs-gbmv200 \
     gigablue-hihalt-gbmv200 \
-    gigablue-reader-gbmv200 \
+    gigablue-reader-${MACHINE} \
     gigablue-libreader-gbmv200 \
     gigablue-buildimage \
     e2fsprogs-resize2fs \
