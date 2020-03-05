@@ -36,6 +36,8 @@ SRC_URI += "http://source.mynonpublic.com/gigablue/linux/gigablue-linux-${PV}-mi
     file://blindscan2.patch \
     file://0001-stv090x-optimized-TS-sync-control.patch \
     file://0002-log2-give-up-on-gcc-constant-optimizations.patch \
+    file://0003-cp1emu-do-not-use-bools-for-arithmetic.patch \
+    file://0002-makefile-disable-warnings.patch \
     "
 
 S = "${WORKDIR}/linux-${PV}"
