@@ -35,7 +35,6 @@ MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
 
 MACHINE_EXTRA_RRECOMMENDS += "\
     gstreamer1.0-plugin-dvbmediasink \
-    ${@bb.utils.contains_any("MACHINE", "gbipbox gb800seplus gb800ueplus gb800se gb800ue gb800solo", "", "gstreamer1.0-libav", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "hisi", "" , "gigablue-cfe", d)} \
     "
 
