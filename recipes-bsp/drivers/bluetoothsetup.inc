@@ -2,6 +2,8 @@ DSCRIPTION = "GigaBlue bluetooth plugin"
 PRIORITY = "required"
 LICENSE = "CLOSED"
 
+inherit compile_python_pyo
+
 DEPENDS = "python-native"
 RDEPENDS_${PN} = "libcurl libsqlite3 libssl libcrypto libudev libusb-compat libudev1-compat libcrypto-compat"
 RDEPENDS_${PN} += "gb-bluetooth-util"
@@ -21,10 +23,6 @@ S = "${WORKDIR}/plugin"
 
 BLUETOOTH_PLUGIN_PATH = "${libdir}/enigma2/python/Plugins/SystemPlugins/BluetoothSetup"
 
-do_compile() {
-	python2 -O -m compileall ${S}
-}
-
 do_install() {
 
 	install -d  ${D}${BLUETOOTH_PLUGIN_PATH}
@@ -40,4 +38,3 @@ FILES_${PN} = "${BLUETOOTH_PLUGIN_PATH}"
 do_populate_sysroot[noexec] = "1"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
-
