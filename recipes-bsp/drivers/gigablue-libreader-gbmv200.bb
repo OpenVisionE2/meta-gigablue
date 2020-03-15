@@ -7,7 +7,7 @@ COMPATIBLE_MACHINE = "^(gbtrio4k|gbip4k)$"
 
 PV = "1.0"
 
-SRC_URI = "file://gigablue-libreader-gbmv200.sh"
+SRC_URI = "file://gigablue-libreader-${MACHINE}.sh"
 
 INITSCRIPT_NAME = "gigablue-libreader"
 INITSCRIPT_PARAMS = "start 05 S ."

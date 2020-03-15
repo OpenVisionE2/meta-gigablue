@@ -3,20 +3,12 @@ SECTION = "base"
 PRIORITY = "required"
 LICENSE = "CLOSED"
 require conf/license/license-close.inc
-PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "^(gbtrio4k)$"
+PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit deploy
 
-SRCDATE = "20190917"
-
 S = "${WORKDIR}/patitions"
-
-SRC_URI = "http://source.mynonpublic.com/gigablue/mv200/gbmv200-partitions-${SRCDATE}.zip"
-
-SRC_URI[md5sum] = "e38fd37a6bb15736fcb82bd7e87458ca"
-SRC_URI[sha256sum] = "b1c3c7e4773bc90bce1560f1757e88bd18ffb7893494ae015fae83fa06af4e64"
 
 ALLOW_EMPTY_${PN} = "1"
 do_configure[nostamp] = "1"
@@ -44,4 +36,3 @@ do_deploy() {
 }
 
 addtask deploy before do_build after do_install
-
