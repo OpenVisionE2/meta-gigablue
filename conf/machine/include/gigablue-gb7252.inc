@@ -20,7 +20,6 @@ PREFERRED_PROVIDER_virtual/kernel = "linux-gigablue"
 PREFERRED_PROVIDER_virtual/egl = "gb-v3ddriver-gb7252"
 PREFERRED_PROVIDER_virtual/libgles2 = "gb-v3ddriver-gb7252"
 
-PACKAGECONFIG_GL_pn-qtbase = " gles2 eglfs linuxfb"
 
 IMAGE_CMD_tar_prepend = "\
     mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \

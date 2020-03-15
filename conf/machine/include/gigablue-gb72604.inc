@@ -26,7 +26,6 @@ PREFERRED_PROVIDER_virtual/kernel = "linux-gigablue"
 PREFERRED_PROVIDER_virtual/egl = "gb-v3ddriver-gb72604"
 PREFERRED_PROVIDER_virtual/libgles2 = "gb-v3ddriver-gb72604"
 
-PACKAGECONFIG_GL_pn-qtbase = " gles2 eglfs linuxfb"
 
 IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
 
