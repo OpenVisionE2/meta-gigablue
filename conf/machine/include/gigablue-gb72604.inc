@@ -15,17 +15,12 @@ MACHINE_FEATURES += "colorlcd gigabluelcd gigabluelcd220 mmc ci omb blindscan-dv
 
 CHIPSET = "bcm72604"
 
-MTD_KERNEL = "mmcblk0p4"
-MTD_ROOTFS = "mmcblk0p5"
-MTD_BLACK  = "mmcblk0"
-
 SRCDATE_BOLT = "20190926"
 
 PREFERRED_VERSION_linux-gigablue = "4.1.20"
 PREFERRED_PROVIDER_virtual/kernel = "linux-gigablue"
 PREFERRED_PROVIDER_virtual/egl = "gb-v3ddriver-gb72604"
 PREFERRED_PROVIDER_virtual/libgles2 = "gb-v3ddriver-gb72604"
-
 
 IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
 

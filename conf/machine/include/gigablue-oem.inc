@@ -3,11 +3,7 @@ require conf/machine/include/build-extras.inc
 
 BOX_BRAND = "gigablue"
 
-MTD_KERNEL = "mtd2"
-MTD_ROOTFS = "mtd0"
-
 KERNEL_FILE = "kernel.bin"
-ROOTFS_FILE = "rootfs.bin"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     gigablue-ddbootup \

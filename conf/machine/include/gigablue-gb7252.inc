@@ -9,10 +9,6 @@ MACHINE_FEATURES += "bolt colorlcd gigabluelcd gigabluelcd220 mmc ci omb blindsc
 
 CHIPSET = "bcm7252s"
 
-MTD_KERNEL = "mmcblk0p4"
-MTD_ROOTFS = "mmcblk0p5"
-MTD_BLACK  = "mmcblk0"
-
 SRCDATE_BOLT = "20181120"
 
 PREFERRED_VERSION_linux-gigablue = "4.1.20"

@@ -1,5 +1,9 @@
 require conf/machine/include/gigablue-oem.inc
 
+MTD_KERNEL = "mtd2"
+MTD_ROOTFS = "mtd0"
+ROOTFS_FILE = "rootfs.bin"
+
 TARGET_ARCH = "mipsel"
 DEFAULTTUNE = "mips32el"
 KERNEL_IMAGETYPE = "vmlinux"
