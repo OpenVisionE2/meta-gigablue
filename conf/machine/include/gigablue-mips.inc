@@ -32,7 +32,6 @@ IMAGE_CMD_ubi_append = "\
     zip -r ${IMAGE_NAME}_usb.zip gigablue/*; \
     rm -f ${DEPLOY_DIR_IMAGE}/*.ubi; \
     rm -f ${DEPLOY_DIR_IMAGE}/*.ubifs; \
-    rm -f ${DEPLOY_DIR_IMAGE}/*.manifest; \
     rm -rf ${DEPLOY_DIR_IMAGE}/gigablue; \
     "
 
@@ -52,7 +51,6 @@ IMAGE_CMD_jffs2_append = "; \
     zip -r ${IMAGE_NAME}_usb.zip gigablue/*; \
     zip ${IMAGE_NAME}_usb.zip burn.bat; \
     rm -f ${DEPLOY_DIR_IMAGE}/*.jffs2; \
-    rm -f ${DEPLOY_DIR_IMAGE}/*.manifest; \
     rm -rf ${DEPLOY_DIR_IMAGE}/gigablue; \
     "
 
