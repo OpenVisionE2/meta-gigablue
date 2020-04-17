@@ -1,7 +1,7 @@
 require conf/machine/include/gigablue-oem.inc
 
 MTD_KERNEL = "mmcblk0p12"
-MTD_ROOTFS = "mmcblk0p13"
+MTD_ROOTFS = "mmcblk0p16"
 MTD_BLACK  = "mmcblk0"
 
 ROOTFS_FILE = "rootfs.tar.bz2"
