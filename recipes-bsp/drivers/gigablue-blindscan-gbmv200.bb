@@ -1,4 +1,4 @@
-SUMMARY = "blindscan for Gigablue Model ${MACHINE}"
+SUMMARY = "blindscan for ${MACHINE}"
 SECTION = "base"
 PRIORITY = "optional"
 LICENSE = "CLOSED"
