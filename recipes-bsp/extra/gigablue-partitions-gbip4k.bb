@@ -2,9 +2,11 @@ require gigablue-partitions-gbmv200.inc
 
 COMPATIBLE_MACHINE = "^(gbip4k)$"
 
-SRCDATE = "20200417"
+SRCDATE = "20200423"
 
-SRC_URI = "http://source.mynonpublic.com/gigablue/mv200/${MACHINE}-partitions-${SRCDATE}.zip"
+SRC_URI = "http://source.mynonpublic.com/gigablue/mv200/${MACHINE}-partitions-${SRCDATE}.zip \
+  file://flash-apploader \
+"
 
-SRC_URI[md5sum] = "9487fe59c664afdfa0ee954731178f32"
-SRC_URI[sha256sum] = "659bea15f1f61c8987481e3889e11f96f70bebf417f84bc31ab8970830858b5f"
+SRC_URI[md5sum] = "ce5f86de7b575cb143b4470bff05bcc2"
+SRC_URI[sha256sum] = "f588756d0e7f3673a28d6976ec172f5aaa63d78d655b10f9836a755418abf07d"
