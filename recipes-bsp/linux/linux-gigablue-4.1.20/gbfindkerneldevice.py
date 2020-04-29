@@ -11,9 +11,9 @@ rootfsdevice = data.split("=",1)[1].split(" ",1)[0]
 kerneldevice = rootfsdevice[:-1] + str(int(rootfsdevice[-1:]) -1)
 
 if os.access('/dev/kernel', os.R_OK):
-	os.remove('/dev/kernel')
-	os.symlink(kerneldevice, '/dev/kernel')
+    os.remove('/dev/kernel')
+    os.symlink(kerneldevice, '/dev/kernel')
 else:
-	os.symlink(kerneldevice, '/dev/kernel')
+    os.symlink(kerneldevice, '/dev/kernel')
 
 # print kerneldevice
