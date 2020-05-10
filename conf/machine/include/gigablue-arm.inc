@@ -2,7 +2,7 @@ require conf/machine/include/gigablue.inc
 
 TARGET_ARCH = "arm"
 DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
-IMAGE_FSTYPES =+ "tar.bz2"
+IMAGE_FSTYPES += "tar.bz2"
 
 ROOTFS_FILE = "rootfs.tar.bz2"
 MTD_KERNEL = "mmcblk0p4"
