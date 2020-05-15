@@ -19,7 +19,7 @@ LIC_FILES_CHKSUM = "file://${WORKDIR}/linux-${PV}/COPYING;md5=d7810fab7487fb0aad
 
 SRC_URI = "http://source.mynonpublic.com/gigablue/linux/gigablue-linux-${PV}-${SRCDATE}.tgz \
     file://defconfig \
-    file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc9.patch \
+    file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc${VISIONGCCVERSION}.patch \
     file://nor-maps-gb800solo.patch \
     file://add-dmx-source-timecode.patch \
     file://af9015-output-full-range-SNR.patch \
