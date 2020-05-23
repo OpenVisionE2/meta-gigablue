@@ -38,6 +38,7 @@ IMAGE_CMD_tar_prepend = "\
     bzip2 ${IMGDEPLOYDIR}/${IMAGEDIR}/rootfs.tar; \
     cd ${IMGDEPLOYDIR}; \
     zip ${IMAGE_NAME}_usb.zip ${IMAGEDIR}/*; \
+    rm -f ${DEPLOY_DIR_IMAGE}/*.tar.bz2; \
     rm -Rf gigablue; \
 "
 
