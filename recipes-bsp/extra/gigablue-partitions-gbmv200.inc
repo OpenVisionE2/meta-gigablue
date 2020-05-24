@@ -8,6 +8,10 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit deploy update-rc.d
 
+SRC_URI = "http://source.mynonpublic.com/gigablue/mv200/${MACHINE}-partitions-${SRCDATE}.zip \
+  file://flash-apploader \
+"
+
 INITSCRIPT_NAME = "flash-apploader"
 INITSCRIPT_PARAMS = "start 90 S ."
 
