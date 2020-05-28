@@ -8,6 +8,9 @@ ROOTFS_FILE = "rootfs.tar.bz2"
 
 DISTRO_FEATURES_remove = "x11 wayland"
 
+SOC_FAMILY = "hisi3798mv200"
+HICHIPSET = "3798mv200"
+
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     gigablue-dvb-modules-${MACHINE} \
     gigablue-loadmodules-gbmv200 \ 
@@ -15,6 +18,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     gigablue-hihalt-gbmv200 \
     gigablue-reader-${MACHINE} \
     gigablue-partitions-${MACHINE} \
+    gigablue-tntfs-${HICHIPSET} \
     gigablue-libreader-gbmv200 \
     gigablue-buildimage \
     e2fsprogs-resize2fs \
@@ -22,7 +26,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     ${@bb.utils.contains('MACHINE_FEATURES', 'emmc', 'partitions-by-name' , '', d)} \
 "
 
-MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisi"
+MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisi multitranscoding"
 
 IMAGE_CLASSES  += "gigablue-emmc_image"
 IMAGE_FSTYPES += "gigablueemmc"
@@ -42,6 +46,8 @@ require conf/machine/include/tune-cortexa15.inc
 DVBSKYPROVIDER = "kernel"
 
 DVBMEDIASINK_CONFIG = "--with-h265 --with-vb8 --with-vb9 --with-spark --with-wma --with-wmv --with-pcm --with-dts --with-eac3"
+
+EXTRA_OECONF_append_pn-enigma2 = "--with-lcddev=/dev/null --with-alphablendingacceleration=always --with-blitaccelerationthreshold=250  --with-fillaccelerationthreshold=190000"
 
 IMAGE_CMD_gigablueemmc_append = "\
     mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
