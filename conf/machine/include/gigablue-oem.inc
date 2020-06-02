@@ -11,10 +11,10 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     kernel-module-rtl8192cu \
     firmware-rtl8192cu \
     firmware-rtl8192cufw \
-    rtl8192eu \
+    kernel-module-extrawlan-rtl8192eu \
     firmware-rtl8192eu \
-    rt8812au \
-    rt8822bu \
+    kernel-module-extrawlan-rt8812au \
+    kernel-module-extrawlan-rt8822bu \
     "
 
 DVBPROVIDER = "kernel"
