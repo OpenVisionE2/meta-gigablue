@@ -2,7 +2,6 @@ require conf/machine/include/gigablue-arm.inc
 
 MACHINE_EXTRA_RRECOMMENDS = " \
     gstreamer1.0-plugin-dvbmediasink \
-    ntfs-3g \
 "
 
 MACHINE_FEATURES += "bolt colorlcd gigabluelcd mmc ci omb blindscan-dvbs blindscan-dvbc transcoding dvb-c mountboot bluetooth"

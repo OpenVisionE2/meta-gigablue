@@ -2,7 +2,6 @@ require conf/machine/include/gigablue-arm.inc
 
 MACHINE_EXTRA_RRECOMMENDS = " \
 	gstreamer1.0-plugin-dvbmediasink \
-	ntfs-3g \
 	"
 
 KERNEL_MODULE_AUTOLOAD += "\
