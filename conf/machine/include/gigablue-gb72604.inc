@@ -1,13 +1,14 @@
 require conf/machine/include/gigablue-arm.inc
 
 MACHINE_EXTRA_RRECOMMENDS = " \
-    gstreamer1.0-plugin-dvbmediasink \
-    ntfs-3g \
-"
+	gstreamer1.0-plugin-dvbmediasink \
+	ntfs-3g \
+	"
 
-### Logitech keyboard ###
-KERNEL_MODULE_AUTOLOAD += "hid-logitech"
-KERNEL_MODULE_AUTOLOAD += "hid-logitech-dj"
+KERNEL_MODULE_AUTOLOAD += "\
+	hid-logitech \
+	hid-logitech-dj \
+	"
 
 DVBSKYPROVIDER = "kernel"
 
@@ -43,20 +44,21 @@ IMAGE_CMD_tar_prepend = "\
 "
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS = " \
-    gigablue-platform-util-gb72604 \
-    gigablue-ddbootup \
-    gigablue-swapcreate \
-"
+	gigablue-platform-util-gb72604 \
+	gigablue-ddbootup \
+	gigablue-swapcreate \
+	kernel-module-hid-logitech \
+	"
 
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS = " \
-    gb-v3ddriver-gb72604 \
-    gb-qteglfs-platform \
-    "
+	gb-v3ddriver-gb72604 \
+	gb-qteglfs-platform \
+	"
 
 EXTRA_IMAGEDEPENDS = "\
-    gigablue-initrd-cfe-${MACHINE} \
-    "
+	gigablue-initrd-cfe-${MACHINE} \
+	"
 
 IMAGE_INSTALL_append += "\
-    bluetoothsetup-gb72604 \
-    "
+	bluetoothsetup-gb72604 \
+	"

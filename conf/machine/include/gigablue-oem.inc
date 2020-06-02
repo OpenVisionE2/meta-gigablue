@@ -6,40 +6,41 @@ BOX_BRAND = "gigablue"
 KERNEL_FILE = "kernel.bin"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-    gigablue-ddbootup \
-    enigma2-plugin-systemplugins-vfdcontrol \
-    kernel-module-rtl8192cu \
-    firmware-rtl8192cu \
-    firmware-rtl8192cufw \
-    kernel-module-extrawlan-rtl8192eu \
-    firmware-rtl8192eu \
-    kernel-module-extrawlan-rt8812au \
-    kernel-module-extrawlan-rt8822bu \
-    "
+	gigablue-ddbootup \
+	enigma2-plugin-systemplugins-vfdcontrol \
+	kernel-module-rtl8192cu \
+	firmware-rtl8192cu \
+	firmware-rtl8192cufw \
+	kernel-module-extrawlan-rtl8192eu \
+	firmware-rtl8192eu \
+	kernel-module-extrawlan-rt8812au \
+	kernel-module-extrawlan-rt8822bu \
+	"
 
 DVBPROVIDER = "kernel"
 
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
-    kernel-module-cdfs \
-    kernel-module-zram \
-    kernel-module-ext2 \
-    kernel-module-ext3 \
-    kernel-module-ext4 \
-    kernel-module-cifs \
-    kernel-module-autofs4 \
-    "
+	kernel-module-cdfs \
+	kernel-module-zram \
+	kernel-module-ext2 \
+	kernel-module-ext3 \
+	kernel-module-ext4 \
+	kernel-module-cifs \
+	kernel-module-autofs4 \
+	"
 
 MACHINE_EXTRA_RRECOMMENDS += "\
-    gstreamer1.0-plugin-dvbmediasink \
-    ${@bb.utils.contains("MACHINE_FEATURES", "hisi", "" , "gigablue-cfe", d)} \
-    "
+	gstreamer1.0-plugin-dvbmediasink \
+	${@bb.utils.contains("MACHINE_FEATURES", "hisi", "" , "gigablue-cfe", d)} \
+	"
 
-KERNEL_MODULE_AUTOLOAD += "xfs"
-KERNEL_MODULE_AUTOLOAD += "ext2"
-KERNEL_MODULE_AUTOLOAD += "ext3"
-KERNEL_MODULE_AUTOLOAD += "ext4"
-KERNEL_MODULE_AUTOLOAD += "autofs4"
-KERNEL_MODULE_AUTOLOAD += "cifs"
+KERNEL_MODULE_AUTOLOAD += "\
+	xfs \
+	ext2 \
+	ext3 \
+	autofs4 \
+	cifs \
+	"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-gigablue"
 
