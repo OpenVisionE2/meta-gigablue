@@ -21,9 +21,6 @@ DVBPROVIDER = "kernel"
 
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
 	kernel-module-zram \
-	kernel-module-ext2 \
-	kernel-module-ext3 \
-	kernel-module-cifs \
 	kernel-module-autofs4 \
 	"
 
@@ -33,10 +30,7 @@ MACHINE_EXTRA_RRECOMMENDS += "\
 	"
 
 KERNEL_MODULE_AUTOLOAD += "\
-	ext2 \
-	ext3 \
 	autofs4 \
-	cifs \
 	xfs \
 	"
 
