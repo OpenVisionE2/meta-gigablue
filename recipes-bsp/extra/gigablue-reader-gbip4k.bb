@@ -2,7 +2,7 @@ require gigablue-reader-gbmv200.inc
 
 COMPATIBLE_MACHINE = "^(gbip4k)$"
 
-SRCDATE = "20200227"
+SRCDATE = "20200612"
 
-SRC_URI[md5sum] = "189c3f60dacd1848bf8622ab0a289d94"
-SRC_URI[sha256sum] = "961f2fae8ca4ff33c3c0308992b6b9c0f75e89e6fd47a1cba631f255b3b50874"
+SRC_URI[md5sum] = "1f1e2bd8145e7580ed1b0ee65afd192f"
+SRC_URI[sha256sum] = "7603bfa5ba642819a33edcec7a84e67d67d2f23a7605156d6460cdc38b2fe37d"
