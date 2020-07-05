@@ -2,7 +2,7 @@ SOC_FAMILY = "bcm7358"
 
 require gigablue-mips.inc
 
-MACHINE_FEATURES += "videoenhancement gbsoftwol osdanimation middleflash"
+MACHINE_FEATURES += "videoenhancement gbsoftwol osdanimation"
 
 # Broken bootloader can only flash around 100 MB
 FLASHSIZE = "96"

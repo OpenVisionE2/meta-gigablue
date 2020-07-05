@@ -2,7 +2,7 @@ SOC_FAMILY = "bcm73625"
 
 require gigablue-mips.inc
 
-MACHINE_FEATURES += "gbsoftwol osdanimation blindscan-dvbs blindscan-dvbc middleflash"
+MACHINE_FEATURES += "gbsoftwol osdanimation blindscan-dvbs blindscan-dvbc"
 
 # Broken bootloader can only flash around 100 MB
 FLASHSIZE = "96"
