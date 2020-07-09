@@ -6,6 +6,8 @@ require conf/license/license-close.inc
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
+PV = "${SRCDATE}"
+
 inherit deploy update-rc.d
 
 SRC_URI = "http://source.mynonpublic.com/gigablue/mv200/${MACHINE}-partitions-${SRCDATE}.zip \
