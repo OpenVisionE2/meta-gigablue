@@ -22,8 +22,6 @@ PREFERRED_PROVIDER_virtual/kernel = "linux-gigablue"
 PREFERRED_PROVIDER_virtual/egl = "gb-v3ddriver-gb72604"
 PREFERRED_PROVIDER_virtual/libgles2 = "gb-v3ddriver-gb72604"
 
-IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
-
 IMAGE_CMD_tar_prepend = "\
     mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \
     cp ${DEPLOY_DIR_IMAGE}/${MACHINE}_boot.bin ${IMGDEPLOYDIR}/${IMAGEDIR}/boot.bin; \
