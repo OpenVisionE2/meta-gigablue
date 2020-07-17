@@ -23,8 +23,8 @@ do_install() {
 	install -m 0755 ${S}/bsa_server ${D}/usr/local/bin/
 
 	install -d ${D}/usr/local/lib
-	install -d ${D}/usr/local/lib/modules
-	install -m 0644 ${S}/btusb.ko ${D}/usr/local/lib/modules/btusb.ko
-	install -m 0644 ${S}/bthid.ko ${D}/usr/local/lib/modules/bthid.ko
+	install -d ${D}/usr/local${base_libdir}/modules
+	install -m 0644 ${S}/btusb.ko ${D}/usr/local${base_libdir}/modules/btusb.ko
+	install -m 0644 ${S}/bthid.ko ${D}/usr/local${base_libdir}/modules/bthid.ko
 }
 

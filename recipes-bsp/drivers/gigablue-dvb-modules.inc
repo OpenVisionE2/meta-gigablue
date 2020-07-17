@@ -3,6 +3,7 @@ SECTION = "base"
 PRIORITY = "required"
 LICENSE = "CLOSED"
 require conf/license/license-close.inc
+
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 PV = "${KV}+${SRCDATE}"
@@ -13,13 +14,14 @@ INHIBIT_PACKAGE_STRIP = "1"
 
 do_compile() {
 }
+
 do_populate_sysroot() {
 }
 
 do_install() {
-    install -d ${D}/lib/modules/${KV}/extra
+    install -d ${D}${base_libdir}/modules/${KV}/extra
     for f in *.ko; do
-        install -m 0644 ${WORKDIR}/$f ${D}/lib/modules/${KV}/extra/$f;
+        install -m 0644 ${WORKDIR}/$f ${D}${base_libdir}/modules/${KV}/extra/$f;
     done
     install -d ${D}/${sysconfdir}/modules-load.d
     for i in `ls | grep \\.ko | sed -e 's/.ko//g'`; do
@@ -27,4 +29,4 @@ do_install() {
     done
 }
 
-FILES_${PN} += "${sysconfdir} /lib/modules/${KV}/extra"
+FILES_${PN} += "${sysconfdir} ${base_libdir}/modules/${KV}/extra"
