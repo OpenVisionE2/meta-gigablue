@@ -18,3 +18,5 @@ PREFERRED_PROVIDER_virtual/blindscan-dvbc = "gigablue-blindscan-utils-arm"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "gigablue-blindscan-utils-arm"
 
 require conf/machine/include/soc-family.inc
+
+MACHINE_FEATURES += " mmc emmc"

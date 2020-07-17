@@ -11,7 +11,7 @@ KERNEL_MODULE_AUTOLOAD += "\
 
 DVBSKYPROVIDER = "kernel"
 
-MACHINE_FEATURES += "colorlcd gigabluelcd gigabluelcd220 mmc ci blindscan-dvbs blindscan-dvbc transcoding dvb-c mountboot bluetooth"
+MACHINE_FEATURES += "colorlcd gigabluelcd gigabluelcd220 ci blindscan-dvbs blindscan-dvbc transcoding dvb-c mountboot bluetooth"
 
 CHIPSET = "bcm72604"
 

@@ -4,7 +4,7 @@ MACHINE_EXTRA_RRECOMMENDS = " \
     gstreamer1.0-plugin-dvbmediasink \
 "
 
-MACHINE_FEATURES += "bolt colorlcd gigabluelcd mmc ci blindscan-dvbs blindscan-dvbc transcoding dvb-c mountboot bluetooth"
+MACHINE_FEATURES += "bolt colorlcd gigabluelcd ci blindscan-dvbs blindscan-dvbc transcoding dvb-c mountboot bluetooth"
 
 CHIPSET = "bcm7252s"
 
