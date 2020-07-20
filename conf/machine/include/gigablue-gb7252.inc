@@ -1,10 +1,10 @@
 require conf/machine/include/gigablue-arm.inc
 
-MACHINE_EXTRA_RRECOMMENDS = " \
+MACHINE_EXTRA_RRECOMMENDS += "\
     gstreamer1.0-plugin-dvbmediasink \
 "
 
-MACHINE_FEATURES += "bolt colorlcd gigabluelcd ci blindscan-dvbs blindscan-dvbc transcoding dvb-c mountboot bluetooth"
+MACHINE_FEATURES += "bolt colorlcd gigabluelcd ci blindscan-dvbs blindscan-dvbc transcoding dvb-c mountboot bluetooth quadpip"
 
 CHIPSET = "bcm7252s"
 
@@ -33,18 +33,18 @@ IMAGE_CMD_tar_prepend = "\
     rm -Rf gigablue; \
 "
 
-MACHINE_ESSENTIAL_EXTRA_RDEPENDS = " \
+MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     gigablue-platform-util-gb7252 \
     gigablue-ddbootup \
     gigablue-swapcreate \
 "
 
-MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS = " \
+MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
     gb-v3ddriver-gb7252 \
     gb-qteglfs-platform \
     "
 
-EXTRA_IMAGEDEPENDS = "\
+EXTRA_IMAGEDEPENDS += "\
     gigablue-initrd-cfe-${MACHINE} \
     "
 

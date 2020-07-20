@@ -2,7 +2,7 @@ SOC_FAMILY = "bcm7356"
 
 require gigablue-mips.inc
 
-MACHINE_FEATURES += "gigabluelcd blindscan-dvbc transcoding ci gigabluemipsbootvideo osdanimation blindscan-dvbs"
+MACHINE_FEATURES += "gigabluelcd blindscan-dvbc transcoding ci gigabluemipsbootvideo osdanimation blindscan-dvbs wol YUV RCA"
 
 KERNEL_MODULE_AUTOLOAD += "\
 	hid-logitech \

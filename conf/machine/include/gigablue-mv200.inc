@@ -6,7 +6,7 @@ MTD_BLACK  = "mmcblk0"
 
 ROOTFS_FILE = "rootfs.tar.bz2"
 
-DISTRO_FEATURES_remove = "x11 wayland"
+DISTRO_FEATURES_remove += "x11 wayland"
 
 SOC_FAMILY = "hisi3798mv200"
 HICHIPSET = "3798mv200"
@@ -26,7 +26,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     ${@bb.utils.contains('MACHINE_FEATURES', 'emmc', 'partitions-by-name' , '', d)} \
 "
 
-MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisi multitranscoding"
+MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisi multitranscoding AV_JACK"
 
 IMAGE_CLASSES  += "gigablue-emmc_image"
 IMAGE_FSTYPES += "gigablueemmc"
@@ -39,7 +39,7 @@ PREFERRED_VERSION_linux-gigablue = "4.4.35"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "gigablue-blindscan-gbmv200"
 PREFERRED_RPROVIDER_showiframe = "gigablue-showiframe-gbmv200"
 PREFERRED_RPROVIDER_aio-grab = "gigablue-grab-gbmv200"
-PREFERRED_PROVIDER_virtual/enigma2-mediaservice ?= "enigma2-plugin-systemplugins-servicehisilicon"
+PREFERRED_PROVIDER_virtual/enigma2-mediaservice = "enigma2-plugin-systemplugins-servicehisilicon"
 
 require conf/machine/include/tune-cortexa15.inc
 

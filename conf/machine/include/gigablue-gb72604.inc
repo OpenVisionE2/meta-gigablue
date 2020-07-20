@@ -1,6 +1,6 @@
 require conf/machine/include/gigablue-arm.inc
 
-MACHINE_EXTRA_RRECOMMENDS = " \
+MACHINE_EXTRA_RRECOMMENDS += "\
 	gstreamer1.0-plugin-dvbmediasink \
 	"
 
@@ -47,12 +47,12 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS = " \
 	kernel-module-hid-logitech \
 	"
 
-MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS = " \
+MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += " \
 	gb-v3ddriver-gb72604 \
 	gb-qteglfs-platform \
 	"
 
-EXTRA_IMAGEDEPENDS = "\
+EXTRA_IMAGEDEPENDS += "\
 	gigablue-initrd-cfe-${MACHINE} \
 	"
 

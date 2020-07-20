@@ -2,7 +2,7 @@ SOC_FAMILY = "bcm7325"
 
 require gigablue-mips.inc
 
-MACHINE_FEATURES += "blindscan-dvbc ci"
+MACHINE_FEATURES += "blindscan-dvbc ci SCART YUV RCA"
 
 PREFERRED_VERSION_linux-gigablue = "3.9.6"
 
