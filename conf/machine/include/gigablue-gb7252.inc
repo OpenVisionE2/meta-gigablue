@@ -51,3 +51,5 @@ EXTRA_IMAGEDEPENDS += "\
 IMAGE_INSTALL_append += "\
     bluetoothsetup-gb7252 \
     "
+
+STB_PLATFORM = "gb7252"

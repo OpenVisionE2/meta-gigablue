@@ -56,6 +56,7 @@ EXTRA_IMAGEDEPENDS += "\
 	gigablue-initrd-cfe-${MACHINE} \
 	"
 
+STB_PLATFORM = "gb72604"
 IMAGE_INSTALL_append += "\
 	bluetoothsetup-gb72604 \
 	"

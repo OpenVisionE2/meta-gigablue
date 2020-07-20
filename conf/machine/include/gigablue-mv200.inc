@@ -77,3 +77,5 @@ IMAGE_CMD_gigablueemmc_append = "\
     rm -Rf ${IMAGEDIR}; \
     rm -Rf ${DEPLOY_DIR_IMAGE}/userdata; \
     "
+
+STB_PLATFORM = "gbmv200"

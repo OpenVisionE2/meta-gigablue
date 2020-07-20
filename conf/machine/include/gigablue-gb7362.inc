@@ -29,3 +29,5 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 DVBMEDIASINK_CONFIG = "--with-wmv --with-wma --with-pcm --with-dts --with-eac3 --with-amr"
 
 GLIBC_EXTRA_OECONF = "--with-tls --with-__thread"
+
+STB_PLATFORM = "gb7362"
