@@ -9,7 +9,7 @@ DEPENDS = "gb-v3ddriver-headers"
 
 PV = "${SRCDATE}"
 
-SRC_URI = "http://source.mynonpublic.com/gigablue/v3ddriver/${GBPLATFORM}-v3ddriver-${SRCDATE}.tar.gz"
+SRC_URI = "http://source.mynonpublic.com/gigablue/v3ddriver/${GBPLATFORM}-v3ddriver-${SRCDATE}.zip"
 
 S = "${WORKDIR}"
 
