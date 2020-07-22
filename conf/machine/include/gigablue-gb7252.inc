@@ -6,7 +6,7 @@ MACHINE_EXTRA_RRECOMMENDS += "\
 
 MACHINE_FEATURES += "bolt colorlcd gigabluelcd ci blindscan-dvbs blindscan-dvbc transcoding dvb-c mountboot bluetooth quadpip"
 
-CHIPSET = "bcm7252s"
+SOC_FAMILY = "bcm7252s"
 
 SRCDATE_BOLT = "20181120"
 

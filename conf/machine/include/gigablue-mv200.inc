@@ -10,6 +10,7 @@ DISTRO_FEATURES_remove += "x11 wayland"
 
 SOC_FAMILY = "hisi3798mv200"
 HICHIPSET = "3798mv200"
+CHIPSET = "Hi3798Mv200"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     gigablue-dvb-modules-${MACHINE} \

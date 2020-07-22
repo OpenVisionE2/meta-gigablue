@@ -13,7 +13,7 @@ DVBSKYPROVIDER = "kernel"
 
 MACHINE_FEATURES += "colorlcd gigabluelcd gigabluelcd220 ci blindscan-dvbs blindscan-dvbc transcoding dvb-c mountboot bluetooth"
 
-CHIPSET = "bcm72604"
+SOC_FAMILY = "bcm72604"
 
 SRCDATE_BOLT = "20190926"
 
