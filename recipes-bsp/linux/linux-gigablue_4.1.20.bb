@@ -77,7 +77,7 @@ kernel_do_compile() {
         fi
 }
 
-pkg_postinst_kernel-image () {
+pkg_postinst_${KERNEL_PACKAGE_NAME}-image () {
     if [ "x$D" == "x" ]; then
         if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE} ] ; then
             python /${KERNEL_IMAGEDEST}/gbfindkerneldevice.py

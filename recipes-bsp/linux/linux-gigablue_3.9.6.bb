@@ -70,7 +70,7 @@ kernel_do_install_append() {
     gzip -9c ${D}/${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${KERNEL_VERSION} > ${D}/${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz
 }
 
-pkg_postinst_kernel-image_gb800se () {
+pkg_postinst_${KERNEL_PACKAGE_NAME}-image_gb800se () {
     if [ "x$D" == "x" ]; then
         if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz ] ; then
             flash_erase /dev/${MTD_KERNEL} 0 0
@@ -81,7 +81,7 @@ pkg_postinst_kernel-image_gb800se () {
     true
 }
 
-pkg_postinst_kernel-image_gb800ue () {
+pkg_postinst_${KERNEL_PACKAGE_NAME}-image_gb800ue () {
     if [ "x$D" == "x" ]; then
         if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz ] ; then
             flash_erase /dev/${MTD_KERNEL} 0 0
@@ -92,7 +92,7 @@ pkg_postinst_kernel-image_gb800ue () {
     true
 }
 
-pkg_postinst_kernel-image_gb800solo () {
+pkg_postinst_${KERNEL_PACKAGE_NAME}-image_gb800solo () {
     if [ "x$D" == "x" ]; then
         if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz ] ; then
             flash_erase /dev/${MTD_KERNEL} 0 0
