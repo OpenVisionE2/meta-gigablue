@@ -7,3 +7,7 @@ SRC_URI[md5sum] = "600cd8fe2f18378dc075c8e0fca513f9"
 SRC_URI[sha256sum] = "ed1335ecb5524cbc80bc69b9df1db7092f010c330f0f445de08e05be9f0195ca"
 
 COMPATIBLE_MACHINE = "^(gbtrio4k)$"
+
+SRC_URI = "http://define-sw.dyndns.tv/openatv/openpli/${MACHINE}-hiko-${SRCDATE}.zip \
+    file://modules \
+"
