@@ -52,13 +52,7 @@ EXTRA_OECONF_append_pn-enigma2 = "--with-lcddev=/dev/null --with-alphablendingac
 
 IMAGE_CMD_gigablueemmc_append = "\
     mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
-    mkdir -p ${DEPLOY_DIR_IMAGE}/userdata; \
-    mkdir -p ${DEPLOY_DIR_IMAGE}/userdata/linuxrootfs1; \
-    mkdir -p ${DEPLOY_DIR_IMAGE}/userdata/linuxrootfs2; \
-    mkdir -p ${DEPLOY_DIR_IMAGE}/userdata/linuxrootfs3; \
-    mkdir -p ${DEPLOY_DIR_IMAGE}/userdata/linuxrootfs4; \
-    cp -a ${IMAGE_ROOTFS}/* ${DEPLOY_DIR_IMAGE}/userdata/linuxrootfs1/; \
-    mkfs.ext4 -F -i 4096 ${DEPLOY_DIR_IMAGE}/${MACHINE}-partitions/rootfs.ext4 -d ${DEPLOY_DIR_IMAGE}/userdata; \
+    mv ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.ext4 ${DEPLOY_DIR_IMAGE}/${MACHINE}-partitions/rootfs.ext4; \
     cd ${IMAGE_ROOTFS}; \
     tar -cvf ${DEPLOY_DIR_IMAGE}/rootfs.tar -C ${IMAGE_ROOTFS} .; \
     mv ${DEPLOY_DIR_IMAGE}/rootfs.tar ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/rootfs.tar; \
@@ -74,9 +68,8 @@ IMAGE_CMD_gigablueemmc_append = "\
     zip -j ${IMAGE_NAME}_recovery_emmc.zip ${DEPLOY_DIR_IMAGE}/usb_update.bin ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/imageversion ${DEPLOY_DIR_IMAGE}/${MACHINE}-partitions/bootargs.bin ${DEPLOY_DIR_IMAGE}/${MACHINE}-partitions/fastboot.bin ${DEPLOY_DIR_IMAGE}/${MACHINE}-partitions/apploader.bin; \
     zip ${IMAGE_NAME}_usb.zip ${IMAGEDIR}/*; \
     rm -f ${DEPLOY_DIR_IMAGE}/*.ext4; \
-    rm -Rf ${DEPLOY_DIR_IMAGE}/usb_update.bin; \
+    rm -f ${DEPLOY_DIR_IMAGE}/usb_update.bin; \
     rm -Rf ${IMAGEDIR}; \
-    rm -Rf ${DEPLOY_DIR_IMAGE}/userdata; \
     "
 
 STB_PLATFORM = "gbmv200"
