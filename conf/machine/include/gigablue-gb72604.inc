@@ -40,7 +40,7 @@ IMAGE_CMD_tar_prepend = "\
     rm -Rf gigablue; \
 "
 
-MACHINE_ESSENTIAL_EXTRA_RDEPENDS = " \
+MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gigablue-platform-util-gb72604 \
 	gigablue-ddbootup \
 	gigablue-swapcreate \
