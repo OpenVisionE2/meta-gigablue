@@ -4,11 +4,6 @@ require gigablue-mips.inc
 
 MACHINE_FEATURES += "gigabluelcd blindscan-dvbc transcoding ci gigabluemipsbootvideo osdanimation blindscan-dvbs wol YUV RCA"
 
-KERNEL_MODULE_AUTOLOAD += "\
-	hid-logitech \
-	hid-logitech-dj \
-	"
-
 DVBSKYPROVIDER = "kernel"
 
 PREFERRED_VERSION_linux-gigablue = "4.8.3"
@@ -20,7 +15,6 @@ UBINIZE_ARGS = "-m 2048 -p 128KiB"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gigablue-dvb-modules-gb7356 \
-	kernel-module-hid-logitech \
 	"
 
 DVBMEDIASINK_CONFIG = "--with-wmv --with-wma --with-pcm --with-dts --with-eac3 --with-amr"

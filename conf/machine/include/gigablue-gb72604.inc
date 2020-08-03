@@ -4,11 +4,6 @@ MACHINE_EXTRA_RRECOMMENDS += "\
 	gstreamer1.0-plugin-dvbmediasink \
 	"
 
-KERNEL_MODULE_AUTOLOAD += "\
-	hid-logitech \
-	hid-logitech-dj \
-	"
-
 DVBSKYPROVIDER = "kernel"
 
 MACHINE_FEATURES += "colorlcd gigabluelcd gigabluelcd220 ci blindscan-dvbs blindscan-dvbc transcoding dvb-c mountboot bluetooth"
@@ -44,7 +39,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gigablue-platform-util-gb72604 \
 	gigablue-ddbootup \
 	gigablue-swapcreate \
-	kernel-module-hid-logitech \
 	"
 
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += " \

@@ -19,19 +19,9 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 
 DVBPROVIDER = "kernel"
 
-MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
-	kernel-module-zram \
-	kernel-module-autofs4 \
-	"
-
 MACHINE_EXTRA_RRECOMMENDS += "\
 	gstreamer1.0-plugin-dvbmediasink \
 	${@bb.utils.contains("MACHINE_FEATURES", "hisi", "" , "gigablue-cfe", d)} \
-	"
-
-KERNEL_MODULE_AUTOLOAD += "\
-	autofs4 \
-	xfs \
 	"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-gigablue"

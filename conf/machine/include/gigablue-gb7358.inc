@@ -7,11 +7,6 @@ MACHINE_FEATURES += "videoenhancement wol osdanimation"
 # Broken bootloader can only flash around 100 MB
 FLASHSIZE = "96"
 
-KERNEL_MODULE_AUTOLOAD += "\
-	hid-logitech \
-	hid-logitech-dj \
-	"
-
 DVBSKYPROVIDER = "kernel"
 
 PREFERRED_VERSION_linux-gigablue = "4.8.3"
@@ -23,7 +18,6 @@ UBINIZE_ARGS = "-m 2048 -p 128KiB"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gigablue-dvb-modules-gb7358 \
-	kernel-module-hid-logitech \
 	"
 
 DVBMEDIASINK_CONFIG = "--with-wmv --with-wma --with-pcm --with-dts --with-eac3 --with-amr"
