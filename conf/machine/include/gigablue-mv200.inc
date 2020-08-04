@@ -73,3 +73,5 @@ IMAGE_CMD_gigablueemmc_append = "\
     "
 
 STB_PLATFORM = "gbmv200"
+
+EXTRA_ALSA = "mv200"
