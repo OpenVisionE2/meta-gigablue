@@ -53,3 +53,5 @@ IMAGE_INSTALL_append = " \
     "
 
 STB_PLATFORM = "gb7252"
+
+EXTRA_OECONF_append_pn-transtreamproxy = " --enable-ext-pid"
