@@ -48,7 +48,7 @@ EXTRA_IMAGEDEPENDS += "\
     gigablue-initrd-cfe-${MACHINE} \
     "
 
-IMAGE_INSTALL_append += "\
+IMAGE_INSTALL_append = " \
     bluetoothsetup-gb7252 \
     "
 

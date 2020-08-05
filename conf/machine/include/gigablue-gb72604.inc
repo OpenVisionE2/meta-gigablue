@@ -41,7 +41,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gigablue-swapcreate \
 	"
 
-MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += " \
+MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
 	gb-v3ddriver-gb72604 \
 	gb-qteglfs-platform \
 	"
@@ -51,6 +51,6 @@ EXTRA_IMAGEDEPENDS += "\
 	"
 
 STB_PLATFORM = "gb72604"
-IMAGE_INSTALL_append += "\
+IMAGE_INSTALL_append = " \
 	bluetoothsetup-gb72604 \
 	"
