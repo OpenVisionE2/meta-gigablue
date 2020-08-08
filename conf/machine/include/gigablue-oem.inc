@@ -7,7 +7,6 @@ KERNEL_FILE = "kernel.bin"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gigablue-ddbootup \
-	enigma2-plugin-systemplugins-vfdcontrol \
 	kernel-module-rtl8192cu \
 	firmware-rtl8192cu \
 	firmware-rtl8192cufw \
