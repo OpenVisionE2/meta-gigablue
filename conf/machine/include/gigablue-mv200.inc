@@ -38,7 +38,7 @@ IMAGE_ROOTFS_SIZE ?= "524288"
 TARGET_ARCH = "arm"
 DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 
-PREFERRED_VERSION_linux-gigablue = KV = "${KERNELVERSION}"
+PREFERRED_VERSION_linux-gigablue = "${KERNELVERSION}"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "gigablue-blindscan-gbmv200"
 PREFERRED_RPROVIDER_showiframe = "gigablue-showiframe-gbmv200"
 PREFERRED_RPROVIDER_aio-grab = "gigablue-grab-gbmv200"
