@@ -1,4 +1,3 @@
-KV = "4.4.35"
 SRCDATE = "20200612"
 
 require gigablue-dvb-modules-hisi.inc

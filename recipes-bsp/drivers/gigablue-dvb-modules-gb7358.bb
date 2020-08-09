@@ -1,7 +1,5 @@
 SRCDATE = "20180403"
 
-KV = "4.8.3"
-
 COMPATIBLE_MACHINE = "^(gb800seplus|gb800ueplus|gbipbox)$"
 
 SRC_URI[md5sum] = "74b4624bfaa155e47b73b964c936f656"

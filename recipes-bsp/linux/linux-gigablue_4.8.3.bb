@@ -1,6 +1,7 @@
 SUMMARY = "Linux kernel for ${MACHINE}"
 SECTION = "kernel"
 LICENSE = "GPLv2"
+LIC_FILES_CHKSUM = "file://${WORKDIR}/linux-${PV}/COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
@@ -8,12 +9,10 @@ COMPATIBLE_MACHINE = "^(gb800seplus|gb800ueplus|gbipbox|gbquad|gbquadplus|gbultr
 
 inherit kernel machine_kernel_pr samba_change_dialect
 
-KERNEL_RELEASE = "4.8.3"
+KERNEL_RELEASE = "${KERNELVERSION}"
 
 SRC_URI[md5sum] = "39e7cdac18f40870e5f3de0e94bbac1f"
 SRC_URI[sha256sum] = "db6dbddb0f3fe757c1bcc4685b56f3aaf83c7c07ecd9e4c6a994226406b82a0d"
-
-LIC_FILES_CHKSUM = "file://${WORKDIR}/linux-${PV}/COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
 # By default, kernel.bbclass modifies package names to allow multiple kernels
 # to be installed in parallel. We revert this change and rprovide the versioned
@@ -23,22 +22,22 @@ PKG_${KERNEL_PACKAGE_NAME}-image = "${KERNEL_PACKAGE_NAME}-image"
 RPROVIDES_${KERNEL_PACKAGE_NAME}-base = "${KERNEL_PACKAGE_NAME}-${KERNEL_VERSION}"
 RPROVIDES_${KERNEL_PACKAGE_NAME}-image = "${KERNEL_PACKAGE_NAME}-image-${KERNEL_VERSION}"
 
-SRC_URI += "http://source.mynonpublic.com/gigablue/linux/gigablue-linux-${PV}-mips-20170302.tgz \
-    file://defconfig \
-    file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc${VISIONGCCVERSION}.patch \
-    file://0001-genet1-1000mbit.patch \
-    file://bcmgenet_phyaddr.patch \
-    file://noforce_correct_pointer_usage.patch \
-    file://0001-Support-TBS-USB-drivers-for-4.6-kernel.patch \
-    file://0001-TBS-fixes-for-4.6-kernel.patch \
-    file://0001-STV-Add-PLS-support.patch \
-    file://0001-STV-Add-SNR-Signal-report-parameters.patch \
-    file://blindscan2.patch \
-    file://0001-stv090x-optimized-TS-sync-control.patch \
-    file://0002-log2-give-up-on-gcc-constant-optimizations.patch \
-    file://0003-cp1emu-do-not-use-bools-for-arithmetic.patch \
-    file://0002-makefile-disable-warnings.patch \
-    "
+SRC_URI = "http://source.mynonpublic.com/gigablue/linux/gigablue-linux-${PV}-mips-20170302.tgz \
+	file://defconfig \
+	file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc${VISIONGCCVERSION}.patch \
+	file://0001-genet1-1000mbit.patch \
+	file://bcmgenet_phyaddr.patch \
+	file://noforce_correct_pointer_usage.patch \
+	file://0001-Support-TBS-USB-drivers-for-4.6-kernel.patch \
+	file://0001-TBS-fixes-for-4.6-kernel.patch \
+	file://0001-STV-Add-PLS-support.patch \
+	file://0001-STV-Add-SNR-Signal-report-parameters.patch \
+	file://blindscan2.patch \
+	file://0001-stv090x-optimized-TS-sync-control.patch \
+	file://0002-log2-give-up-on-gcc-constant-optimizations.patch \
+	file://0003-cp1emu-do-not-use-bools-for-arithmetic.patch \
+	file://0002-makefile-disable-warnings.patch \
+	"
 
 S = "${WORKDIR}/linux-${PV}"
 B = "${WORKDIR}/build"

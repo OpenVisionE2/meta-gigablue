@@ -1,5 +1,7 @@
 require conf/machine/include/gigablue-arm.inc
 
+KERNELVERSION = "4.1.20"
+
 MACHINE_EXTRA_RRECOMMENDS += "\
 	gstreamer1.0-plugin-dvbmediasink \
 	"
@@ -12,7 +14,7 @@ SOC_FAMILY = "bcm72604"
 
 SRCDATE_BOLT = "20190926"
 
-PREFERRED_VERSION_linux-gigablue = "4.1.20"
+PREFERRED_VERSION_linux-gigablue = "${KERNELVERSION}"
 PREFERRED_PROVIDER_virtual/kernel = "linux-gigablue"
 PREFERRED_PROVIDER_virtual/egl = "gb-v3ddriver-gb72604"
 PREFERRED_PROVIDER_virtual/libgles2 = "gb-v3ddriver-gb72604"
@@ -50,7 +52,8 @@ EXTRA_IMAGEDEPENDS += "\
 	gigablue-initrd-cfe-${MACHINE} \
 	"
 
-STB_PLATFORM = "gb72604"
 IMAGE_INSTALL_append = " \
 	bluetoothsetup-gb72604 \
 	"
+
+STB_PLATFORM = "gb72604"

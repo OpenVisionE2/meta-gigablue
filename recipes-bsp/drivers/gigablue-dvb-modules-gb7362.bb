@@ -1,7 +1,5 @@
 SRCDATE = "20180403"
 
-KV = "4.8.3"
-
 COMPATIBLE_MACHINE = "^(gbultrase|gbultraue|gbx1|gbx3)$"
 
 SRC_URI[md5sum] = "46cf8256dc42dd4817d6d7eb5d6cc284"

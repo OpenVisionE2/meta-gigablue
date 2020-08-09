@@ -1,3 +1,5 @@
+KERNELVERSION = "4.8.3"
+
 SOC_FAMILY = "bcm7362"
 
 require gigablue-mips.inc
@@ -9,7 +11,7 @@ FLASHSIZE = "96"
 
 DVBSKYPROVIDER = "kernel"
 
-PREFERRED_VERSION_linux-gigablue = "4.8.3"
+PREFERRED_VERSION_linux-gigablue = "${KERNELVERSION}"
 
 IMAGE_FSTYPES ?= "ubi"
 MKUBIFS_ARGS = "-m 2048 -e 126976 -c 4096"

@@ -1,8 +1,10 @@
 require conf/machine/include/gigablue-arm.inc
 
+KERNELVERSION = "4.1.20"
+
 MACHINE_EXTRA_RRECOMMENDS += "\
-    gstreamer1.0-plugin-dvbmediasink \
-"
+	gstreamer1.0-plugin-dvbmediasink \
+	"
 
 MACHINE_FEATURES += "bolt colorlcd gigabluelcd ci blindscan-dvbs blindscan-dvbc transcoding dvb-c mountboot bluetooth quadpip"
 
@@ -10,7 +12,7 @@ SOC_FAMILY = "bcm7252s"
 
 SRCDATE_BOLT = "20181120"
 
-PREFERRED_VERSION_linux-gigablue = "4.1.20"
+PREFERRED_VERSION_linux-gigablue = "${KERNELVERSION}"
 PREFERRED_PROVIDER_virtual/kernel = "linux-gigablue"
 PREFERRED_PROVIDER_virtual/egl = "gb-v3ddriver-gb7252"
 PREFERRED_PROVIDER_virtual/libgles2 = "gb-v3ddriver-gb7252"
@@ -34,23 +36,23 @@ IMAGE_CMD_tar_prepend = "\
 "
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-    gigablue-platform-util-gb7252 \
-    gigablue-ddbootup \
-    gigablue-swapcreate \
-"
+	gigablue-platform-util-gb7252 \
+	gigablue-ddbootup \
+	gigablue-swapcreate \
+	"
 
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
-    gb-v3ddriver-gb7252 \
-    gb-qteglfs-platform \
-    "
+	gb-v3ddriver-gb7252 \
+	gb-qteglfs-platform \
+	"
 
 EXTRA_IMAGEDEPENDS += "\
-    gigablue-initrd-cfe-${MACHINE} \
-    "
+	gigablue-initrd-cfe-${MACHINE} \
+	"
 
 IMAGE_INSTALL_append = " \
-    bluetoothsetup-gb7252 \
-    "
+	bluetoothsetup-gb7252 \
+	"
 
 STB_PLATFORM = "gb7252"
 

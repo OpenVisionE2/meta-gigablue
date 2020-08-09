@@ -1,5 +1,7 @@
 require conf/machine/include/gigablue-oem.inc
 
+KERNELVERSION = "4.4.35"
+
 MTD_KERNEL = "mmcblk0p12"
 MTD_ROOTFS = "mmcblk0p16"
 MTD_BLACK  = "mmcblk0"
@@ -13,19 +15,19 @@ HICHIPSET = "3798mv200"
 CHIPSET = "Hi3798Mv200"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-    gigablue-dvb-modules-${MACHINE} \
-    gigablue-loadmodules-gbmv200 \ 
-    gigablue-libs-gbmv200 \
-    gigablue-hihalt-gbmv200 \
-    gigablue-reader-${MACHINE} \
-    gigablue-partitions-${MACHINE} \
-    gigablue-tntfs-${HICHIPSET} \
-    gigablue-libreader-gbmv200 \
-    gigablue-buildimage \
-    e2fsprogs-resize2fs \
-    gptfdisk \
-    ${@bb.utils.contains('MACHINE_FEATURES', 'emmc', 'partitions-by-name' , '', d)} \
-"
+	gigablue-dvb-modules-${MACHINE} \
+	gigablue-loadmodules-gbmv200 \ 
+	gigablue-libs-gbmv200 \
+	gigablue-hihalt-gbmv200 \
+	gigablue-reader-${MACHINE} \
+	gigablue-partitions-${MACHINE} \
+	gigablue-tntfs-${HICHIPSET} \
+	gigablue-libreader-gbmv200 \
+	gigablue-buildimage \
+	e2fsprogs-resize2fs \
+	gptfdisk \
+	${@bb.utils.contains('MACHINE_FEATURES', 'emmc', 'partitions-by-name' , '', d)} \
+	"
 
 MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisi multitranscoding AV_JACK vfdsymbol"
 
@@ -36,7 +38,7 @@ IMAGE_ROOTFS_SIZE ?= "524288"
 TARGET_ARCH = "arm"
 DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 
-PREFERRED_VERSION_linux-gigablue = "4.4.35"
+PREFERRED_VERSION_linux-gigablue = KV = "${KERNELVERSION}"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "gigablue-blindscan-gbmv200"
 PREFERRED_RPROVIDER_showiframe = "gigablue-showiframe-gbmv200"
 PREFERRED_RPROVIDER_aio-grab = "gigablue-grab-gbmv200"

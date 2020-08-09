@@ -5,15 +5,17 @@ LICENSE = "CLOSED"
 PACKAGE_ARCH := "${MACHINE}"
 # require conf/license/license-close.inc
 
+KV = "${KERNELVERSION}"
+
 PV = "${KV}+${SRCDATE}"
 
 INHIBIT_PACKAGE_STRIP = "1"
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 
 SRC_URI = " \
-    http://source.mynonpublic.com/gigablue/drivers/platform-util-${GBPLATFORM}-${KV}-${SRCDATE}.zip \
-    file://${INITSCRIPT_NAME}.sysvinit \
-"
+	http://source.mynonpublic.com/gigablue/drivers/platform-util-${GBPLATFORM}-${KV}-${SRCDATE}.zip \
+	file://${INITSCRIPT_NAME}.sysvinit \
+	"
 
 S="${WORKDIR}/platform"
 

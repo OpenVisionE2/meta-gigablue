@@ -4,7 +4,6 @@ PRIORITY = "required"
 LICENSE = "CLOSED"
 PACKAGE_ARCH = "${MACHINE}"
 
-PV = "1.0"
 
 S = "${WORKDIR}"
 

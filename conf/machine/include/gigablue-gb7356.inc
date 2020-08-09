@@ -1,3 +1,5 @@
+KERNELVERSION = "4.8.3"
+
 SOC_FAMILY = "bcm7356"
 
 require gigablue-mips.inc
@@ -6,7 +8,7 @@ MACHINE_FEATURES += "gigabluelcd blindscan-dvbc transcoding ci gigabluemipsbootv
 
 DVBSKYPROVIDER = "kernel"
 
-PREFERRED_VERSION_linux-gigablue = "4.8.3"
+PREFERRED_VERSION_linux-gigablue = "${KERNELVERSION}"
 
 IMAGE_FSTYPES ?= "ubi"
 MKUBIFS_ARGS = "-m 2048 -e 126976 -c 4096 -F"

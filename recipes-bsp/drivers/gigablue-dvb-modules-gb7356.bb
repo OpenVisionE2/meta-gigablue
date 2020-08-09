@@ -1,7 +1,5 @@
 SRCDATE = "20180403"
 
-KV = "4.8.3"
-
 COMPATIBLE_MACHINE = "^(gbquad|gbquadplus)$"
 
 SRC_URI[md5sum] = "cb92f5bc77d9f1fa527ac2dc4f01995c"
