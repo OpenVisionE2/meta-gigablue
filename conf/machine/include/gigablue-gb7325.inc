@@ -17,3 +17,5 @@ DVBMEDIASINK_CONFIG = "--with-wmv"
 GLIBC_EXTRA_OECONF = "--with-tls"
 
 STB_PLATFORM = "gb7325"
+
+PREFERRED_VERSION_kernel-module-extrawlan-rt8812au = "4.3.14"
