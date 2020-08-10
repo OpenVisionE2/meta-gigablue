@@ -5,7 +5,6 @@ LICENSE = "CLOSED"
 PACKAGE_ARCH := "${MACHINE}"
 # require conf/license/license-close.inc
 
-KV = "${KERNELVERSION}"
 
 PV = "${KV}+${SRCDATE}"
 

@@ -9,7 +9,6 @@ COMPATIBLE_MACHINE = "^(gb800se|gb800solo|gb800ue)$"
 
 inherit kernel machine_kernel_pr samba_change_dialect
 
-KV = "${KERNELVERSION}"
 
 SRCDATE = "20140904"
 
