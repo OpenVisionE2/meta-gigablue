@@ -34,3 +34,5 @@ MACHINE_FEATURES += "alsa hdmicec switchoff blindscan-tbs gigablue HDMI"
 BOOTLOGO_FILENAME = "splash.bin"
 
 require conf/machine/include/soc-family.inc
+
+BLINDSCAN_BINARY = "gigablue_blindscan"
