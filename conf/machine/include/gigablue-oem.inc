@@ -36,3 +36,5 @@ BOOTLOGO_FILENAME = "splash.bin"
 require conf/machine/include/soc-family.inc
 
 BLINDSCAN_BINARY = "gigablue_blindscan"
+
+RCNAME ?= "gb0"
