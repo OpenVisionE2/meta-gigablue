@@ -45,7 +45,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
 	gb-v3ddriver-gb72604 \
-	gb-qteglfs-platform \
 	"
 
 EXTRA_IMAGEDEPENDS += "\
