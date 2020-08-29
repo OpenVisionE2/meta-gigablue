@@ -21,6 +21,6 @@ require conf/machine/include/soc-family.inc
 
 MACHINE_FEATURES += "mmc emmc swap"
 
-MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
+MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	${@bb.utils.contains('MACHINE_FEATURES', 'swap', 'gigablue-swapcreate', '',d)} \
 	"

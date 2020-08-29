@@ -2,10 +2,6 @@ require conf/machine/include/gigablue-arm.inc
 
 KERNELVERSION = "4.1.20"
 
-MACHINE_EXTRA_RRECOMMENDS += "\
-	gstreamer1.0-plugin-dvbmediasink \
-	"
-
 DVBSKYPROVIDER = "kernel"
 
 MACHINE_FEATURES += "colorlcd gigabluelcd gigabluelcd220 ci blindscan-dvbs blindscan-dvbc transcoding dvb-c mountboot bluetooth"
@@ -41,10 +37,8 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gigablue-platform-util-gb72604 \
 	gigablue-ddbootup \
 	gigablue-swapcreate \
-	"
-
-MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
 	gb-v3ddriver-gb72604 \
+	gstreamer1.0-plugin-dvbmediasink \
 	"
 
 EXTRA_IMAGEDEPENDS += "\

@@ -2,10 +2,6 @@ require conf/machine/include/gigablue-arm.inc
 
 KERNELVERSION = "4.1.20"
 
-MACHINE_EXTRA_RRECOMMENDS += "\
-	gstreamer1.0-plugin-dvbmediasink \
-	"
-
 MACHINE_FEATURES += "bolt colorlcd gigabluelcd ci blindscan-dvbs blindscan-dvbc transcoding dvb-c mountboot bluetooth quadpip"
 
 SOC_FAMILY = "bcm7252s"
@@ -39,10 +35,8 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gigablue-platform-util-gb7252 \
 	gigablue-ddbootup \
 	gigablue-swapcreate \
-	"
-
-MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
 	gb-v3ddriver-gb7252 \
+	gstreamer1.0-plugin-dvbmediasink \
 	"
 
 EXTRA_IMAGEDEPENDS += "\
