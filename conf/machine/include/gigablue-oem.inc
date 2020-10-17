@@ -7,14 +7,13 @@ KERNEL_FILE = "kernel.bin"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gigablue-ddbootup \
-	${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", " \
 	kernel-module-rtl8192cu \
 	firmware-rtl8192cu \
 	firmware-rtl8192cufw \
 	kernel-module-extrawlan-rtl8192eu \
 	firmware-rtl8192eu \
 	kernel-module-extrawlan-rt8812au \
-	kernel-module-extrawlan-rt8822bu", d)} \
+	kernel-module-extrawlan-rt8822bu \
 	gstreamer1.0-plugin-dvbmediasink \
 	${@bb.utils.contains("MACHINE_FEATURES", "hisi", "" , "gigablue-cfe", d)} \
 	"

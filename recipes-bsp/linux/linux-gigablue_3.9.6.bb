@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://${WORKDIR}/linux-${PV}/COPYING;md5=d7810fab7487fb0aad
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "^(gb800se|gb800solo|gb800ue)$"
+COMPATIBLE_MACHINE = "^(gb800solo)$"
 
 inherit kernel machine_kernel_pr samba_change_dialect
 
@@ -66,28 +66,6 @@ FILES_${KERNEL_PACKAGE_NAME}-image = "/${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.g
 kernel_do_install_append() {
     ${STRIP} ${D}/${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${KERNEL_VERSION}
     gzip -9c ${D}/${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${KERNEL_VERSION} > ${D}/${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz
-}
-
-pkg_postinst_${KERNEL_PACKAGE_NAME}-image_gb800se () {
-    if [ "x$D" == "x" ]; then
-        if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz ] ; then
-            flash_erase /dev/${MTD_KERNEL} 0 0
-            nandwrite -p /dev/${MTD_KERNEL} /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz
-        fi
-    fi
-    rm -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz
-    true
-}
-
-pkg_postinst_${KERNEL_PACKAGE_NAME}-image_gb800ue () {
-    if [ "x$D" == "x" ]; then
-        if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz ] ; then
-            flash_erase /dev/${MTD_KERNEL} 0 0
-            nandwrite -p /dev/${MTD_KERNEL} /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz
-        fi
-    fi
-    rm -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz
-    true
 }
 
 pkg_postinst_${KERNEL_PACKAGE_NAME}-image_gb800solo () {

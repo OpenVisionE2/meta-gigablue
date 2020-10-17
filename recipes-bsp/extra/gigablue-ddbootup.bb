@@ -4,7 +4,6 @@ PRIORITY = "required"
 LICENSE = "CLOSED"
 PACKAGE_ARCH = "${MACHINE}"
 
-
 S = "${WORKDIR}"
 
 do_compile() {
