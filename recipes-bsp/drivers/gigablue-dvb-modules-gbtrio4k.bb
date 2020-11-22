@@ -1,9 +1,9 @@
-SRCDATE = "20200703"
+SRCDATE = "20201119"
 
 require gigablue-dvb-modules-hisi.inc
 
-SRC_URI[md5sum] = "600cd8fe2f18378dc075c8e0fca513f9"
-SRC_URI[sha256sum] = "ed1335ecb5524cbc80bc69b9df1db7092f010c330f0f445de08e05be9f0195ca"
+SRC_URI[md5sum] = "325c9f92dc5f363a89bffdedec0a164e"
+SRC_URI[sha256sum] = "d58b83b251708b8e5319e92b6d27e896371d1471898534c6e55802b3fd54845e"
 
 COMPATIBLE_MACHINE = "^(gbtrio4k)$"
 
