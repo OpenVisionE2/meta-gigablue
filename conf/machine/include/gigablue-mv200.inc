@@ -21,7 +21,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gigablue-hihalt-gbmv200 \
 	gigablue-reader-${MACHINE} \
 	gigablue-partitions-${MACHINE} \
-	gigablue-tntfs-${HICHIPSET} \
 	gigablue-libreader-gbmv200 \
 	gigablue-buildimage \
 	e2fsprogs-resize2fs \
