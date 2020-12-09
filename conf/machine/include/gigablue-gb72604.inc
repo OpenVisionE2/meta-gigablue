@@ -16,6 +16,7 @@ PREFERRED_PROVIDER_virtual/egl = "gb-v3ddriver-gb72604"
 PREFERRED_PROVIDER_virtual/libgles2 = "gb-v3ddriver-gb72604"
 
 IMAGE_CMD_tar_prepend = "\
+	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
 	mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \
 	cp ${DEPLOY_DIR_IMAGE}/${MACHINE}_boot.bin ${IMGDEPLOYDIR}/${IMAGEDIR}/boot.bin; \
 	cp ${DEPLOY_DIR_IMAGE}/${MACHINE}_gpt.bin ${IMGDEPLOYDIR}/${IMAGEDIR}/gpt.bin; \
