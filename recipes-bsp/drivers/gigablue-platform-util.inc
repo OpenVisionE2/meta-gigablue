@@ -2,9 +2,8 @@ SUMMARY = "Platform Util drivers for ${MACHINE}"
 SECTION = "base"
 PRIORITY = "required"
 LICENSE = "CLOSED"
-PACKAGE_ARCH := "${MACHINE}"
-# require conf/license/license-close.inc
 
+PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 PV = "${KV}+${SRCDATE}"
 
@@ -19,14 +18,15 @@ SRC_URI = " \
 S="${WORKDIR}/platform"
 
 do_install() {
-    install -d ${D}/home/root/platform
-    install -m 0755 ${S}/* ${D}/home/root/platform
-    install -d ${D}${sysconfdir}/init.d
-    install -m 0755 ${WORKDIR}/${INITSCRIPT_NAME}.sysvinit ${D}${sysconfdir}/init.d/${INITSCRIPT_NAME}
+	install -d ${D}/home/root/platform
+	install -m 0755 ${S}/* ${D}/home/root/platform
+	install -d ${D}${sysconfdir}/init.d
+	install -m 0755 ${WORKDIR}/${INITSCRIPT_NAME}.sysvinit ${D}${sysconfdir}/init.d/${INITSCRIPT_NAME}
 }
 
 do_package_qa() {
 }
+
 do_populate_sysroot() {
 }
 
@@ -36,4 +36,3 @@ inherit update-rc.d
 
 INITSCRIPT_PARAMS = "start 65 S . stop 90 0 ."
 INITSCRIPT_NAME = "gigablue-platform-util"
-

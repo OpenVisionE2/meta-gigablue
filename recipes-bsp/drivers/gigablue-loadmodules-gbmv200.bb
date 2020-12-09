@@ -18,6 +18,6 @@ do_compile() {
 }
 
 do_install() {
-    install -d ${D}${sysconfdir}/init.d/
-    install -m 0755 ${WORKDIR}/gigablue-loadmodules-gbmv200.sh ${D}${sysconfdir}/init.d/gigablue-loadmodules
+	install -d ${D}${sysconfdir}/init.d/
+	install -m 0755 ${WORKDIR}/gigablue-loadmodules-gbmv200.sh ${D}${sysconfdir}/init.d/gigablue-loadmodules
 }
