@@ -10,8 +10,6 @@ SRCDATE_BOLT = "20181120"
 
 PREFERRED_VERSION_linux-gigablue = "${KERNELVERSION}"
 PREFERRED_PROVIDER_virtual/kernel = "linux-gigablue"
-PREFERRED_PROVIDER_virtual/egl = "gb-v3ddriver-gb7252"
-PREFERRED_PROVIDER_virtual/libgles2 = "gb-v3ddriver-gb7252"
 
 IMAGE_CMD_tar_prepend = "\
 	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
@@ -36,7 +34,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gigablue-platform-util-gb7252 \
 	gigablue-ddbootup \
 	gigablue-swapcreate \
-	gb-v3ddriver-gb7252 \
 	gstreamer1.0-plugin-dvbmediasink \
 	"
 
