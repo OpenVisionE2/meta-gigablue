@@ -72,10 +72,14 @@ IMAGE_CMD_gigablueemmc_append = " \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.ext4; \
 	rm -f ${DEPLOY_DIR_IMAGE}/usb_update.bin; \
 	rm -Rf ${IMAGEDIR}; \
+	rm -Rf gigablue; \
+	rm -Rf userdata; \
+	rm -Rf ${MACHINE}-partitions; \
 	"
 
 IMAGE_CMD_prepend = "\
 	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
+	rm -Rf ${DEPLOY_DIR_IMAGE}/userdata; \
 	"
 
 STB_PLATFORM = "gbmv200"
