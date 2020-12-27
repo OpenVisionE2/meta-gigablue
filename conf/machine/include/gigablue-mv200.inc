@@ -26,6 +26,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	e2fsprogs-resize2fs \
 	gptfdisk \
 	${@bb.utils.contains('MACHINE_FEATURES', 'emmc', 'partitions-by-name' , '', d)} \
+	enigma2-plugin-systemplugins-gigabluevfdcontrol \
 	"
 
 MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisi multitranscoding AV_JACK vfdsymbol"
