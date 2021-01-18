@@ -29,7 +29,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	enigma2-plugin-systemplugins-gigabluevfdcontrol \
 	"
 
-MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisi multitranscoding AV_JACK vfdsymbol"
+MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisil multitranscoding AV_JACK vfdsymbol"
 
 IMAGE_CLASSES  += "gigablue-emmc_image"
 IMAGE_FSTYPES += "gigablueemmc"
