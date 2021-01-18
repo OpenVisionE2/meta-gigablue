@@ -14,7 +14,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	firmware-rtl8192eu \
 	kernel-module-extrawlan-rt8812au \
 	kernel-module-extrawlan-rt8822bu \
-	gstreamer1.0-plugin-dvbmediasink \
 	${@bb.utils.contains("MACHINE_FEATURES", "hisi", "" , "gigablue-cfe", d)} \
 	"
 

@@ -37,7 +37,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gigablue-platform-util-gb72604 \
 	gigablue-ddbootup \
 	gigablue-swapcreate \
-	gstreamer1.0-plugin-dvbmediasink \
 	"
 
 EXTRA_IMAGEDEPENDS += "\
