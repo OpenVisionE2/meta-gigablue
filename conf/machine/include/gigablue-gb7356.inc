@@ -4,7 +4,7 @@ SOC_FAMILY = "bcm7356"
 
 require gigablue-mips.inc
 
-MACHINE_FEATURES += "gigabluelcd blindscan-dvbc transcoding ci gigabluemipsbootvideo osdanimation blindscan-dvbs wol YUV RCA"
+MACHINE_FEATURES += "gigabluelcd blindscan-dvbc transcoding ci osdanimation blindscan-dvbs wol YUV RCA"
 
 DVBSKYPROVIDER = "kernel"
 
