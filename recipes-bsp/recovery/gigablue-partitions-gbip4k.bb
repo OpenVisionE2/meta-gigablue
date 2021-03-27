@@ -1,4 +1,4 @@
-require gigablue-partitions-gbmv200.inc
+require gb-partitions-gbmv200.inc
 
 COMPATIBLE_MACHINE = "^(gbip4k)$"
 
