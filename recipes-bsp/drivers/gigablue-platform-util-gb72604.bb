@@ -2,9 +2,9 @@ require gigablue-platform-util.inc
 
 GBPLATFORM = "gb72604"
 
-SRCDATE = "20200723.r0"
+SRCDATE = "20200723.r1"
 
-SRC_URI[md5sum] = "d0ca7875e23da70ec053196d34f22936"
-SRC_URI[sha256sum] = "dbb3291c9b8e4312ebe14675b91212f2e6980765b840e457207c54b978aac99e"
+SRC_URI[md5sum] = "ac53b8716adb3e7700fbc41e6a19fbf9"
+SRC_URI[sha256sum] = "ce6fea0ae6231bf322d23214e180109dea078c7c3fe785b9d97744ee99ee74f4"
 
 COMPATIBLE_MACHINE = "^(gbx34k)$"
