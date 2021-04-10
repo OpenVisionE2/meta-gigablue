@@ -9,7 +9,7 @@ MACHINE_FEATURES += "blindscan-dvbc ci SCART YUV RCA"
 PREFERRED_VERSION_linux-gigablue = "${KERNELVERSION}"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-	gigablue-dvb-modules-gb7325 \
+	gigablue-dvb-modules-${STB_PLATFORM} \
 	"
 
 DVBMEDIASINK_CONFIG = "--with-wmv"

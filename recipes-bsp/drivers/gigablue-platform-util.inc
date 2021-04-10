@@ -11,7 +11,7 @@ INHIBIT_PACKAGE_STRIP = "1"
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 
 SRC_URI = " \
-	http://source.mynonpublic.com/gigablue/drivers/platform-util-${GBPLATFORM}-${KV}-${SRCDATE}.zip \
+	http://source.mynonpublic.com/gigablue/drivers/platform-util-${STB_PLATFORM}-${KV}-${SRCDATE}.zip \
 	file://${INITSCRIPT_NAME}.sysvinit \
 	"
 
@@ -20,8 +20,8 @@ S="${WORKDIR}/platform"
 do_install() {
 	install -d ${D}/home/root/platform
 	install -m 0755 ${S}/* ${D}/home/root/platform
-	install -d ${D}${sysconfdir}/init.d
-	install -m 0755 ${WORKDIR}/${INITSCRIPT_NAME}.sysvinit ${D}${sysconfdir}/init.d/${INITSCRIPT_NAME}
+	install -d ${D}${INIT_D_DIR}
+	install -m 0755 ${WORKDIR}/${INITSCRIPT_NAME}.sysvinit ${D}${INIT_D_DIR}/${INITSCRIPT_NAME}
 }
 
 do_package_qa() {
@@ -30,7 +30,7 @@ do_package_qa() {
 do_populate_sysroot() {
 }
 
-FILES_${PN}="/home/root/platform ${sysconfdir}/init.d"
+FILES_${PN} = "/"
 
 inherit update-rc.d
 

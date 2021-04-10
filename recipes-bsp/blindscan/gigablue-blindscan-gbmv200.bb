@@ -12,7 +12,7 @@ SRCDATE = "20190307"
 
 PV = "${SRCDATE}"
 
-SRC_URI  = "http://source.mynonpublic.com/gigablue/mv200/gbmv200-blindscan-${SRCDATE}.zip"
+SRC_URI  = "http://source.mynonpublic.com/gigablue/mv200/${STB_PLATFORM}-blindscan-${SRCDATE}.zip"
 
 SRC_URI[md5sum] = "b71bd793f450cd5e492e9171575475a4"
 SRC_URI[sha256sum] = "bb55956f8b7b32bb483040151f374cd84162cdff6f12f3943504e432c3f16311"

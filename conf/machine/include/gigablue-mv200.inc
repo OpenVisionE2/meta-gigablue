@@ -16,12 +16,12 @@ CHIPSET = "Hi3798Mv200"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gigablue-dvb-modules-${MACHINE} \
-	gigablue-loadmodules-gbmv200 \ 
-	gigablue-libs-gbmv200 \
-	gigablue-hihalt-gbmv200 \
+	gigablue-loadmodules-${STB_PLATFORM} \ 
+	gigablue-libs-${STB_PLATFORM} \
+	gigablue-hihalt-${STB_PLATFORM} \
 	gigablue-reader-${MACHINE} \
 	gigablue-partitions-${MACHINE} \
-	gigablue-libreader-gbmv200 \
+	gigablue-libreader-${STB_PLATFORM} \
 	gigablue-buildimage \
 	e2fsprogs-resize2fs \
 	gptfdisk \
@@ -38,9 +38,9 @@ TARGET_ARCH = "arm"
 DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 
 PREFERRED_VERSION_linux-gigablue = "${KERNELVERSION}"
-PREFERRED_PROVIDER_virtual/blindscan-dvbs = "gigablue-blindscan-gbmv200"
-PREFERRED_RPROVIDER_showiframe = "gigablue-showiframe-gbmv200"
-PREFERRED_RPROVIDER_aio-grab = "gigablue-grab-gbmv200"
+PREFERRED_PROVIDER_virtual/blindscan-dvbs = "gigablue-blindscan-${STB_PLATFORM}"
+PREFERRED_RPROVIDER_showiframe = "gigablue-showiframe-${STB_PLATFORM}"
+PREFERRED_RPROVIDER_aio-grab = "gigablue-grab-${STB_PLATFORM}"
 PREFERRED_PROVIDER_virtual/enigma2-mediaservice = "enigma2-plugin-systemplugins-servicehisilicon"
 
 require conf/machine/include/tune-cortexa15.inc

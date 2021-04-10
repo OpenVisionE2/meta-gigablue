@@ -16,7 +16,7 @@ INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 SOLIBS = ".so"
 FILES_SOLIBSDEV = ""
 
-SRC_URI = "http://source.mynonpublic.com/gigablue/mv200/gbmv200-hilib-${SRCDATE}.tar.gz"
+SRC_URI = "http://source.mynonpublic.com/gigablue/mv200/${STB_PLATFORM}-hilib-${SRCDATE}.tar.gz"
 
 S = "${WORKDIR}/hilib"
 

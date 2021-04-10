@@ -14,7 +14,7 @@ RPROVIDES_${PN}  = "showiframe"
 RREPLACES_${PN}  = "showiframe"
 RCONFLICTS_${PN} = "showiframe"
 
-SRC_URI = "http://source.mynonpublic.com/gigablue/mv200/gbmv200-showiframe-${SRCDATE}.tar.gz"
+SRC_URI = "http://source.mynonpublic.com/gigablue/mv200/${STB_PLATFORM}-showiframe-${SRCDATE}.tar.gz"
 
 S = "${WORKDIR}"
 

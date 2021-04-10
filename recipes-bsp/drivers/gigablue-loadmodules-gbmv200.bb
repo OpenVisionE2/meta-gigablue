@@ -5,7 +5,7 @@ require conf/license/license-gplv2.inc
 
 COMPATIBLE_MACHINE = "^(gbtrio4k|gbip4k)$"
 
-SRC_URI = "file://gigablue-loadmodules-gbmv200.sh"
+SRC_URI = "file://gigablue-loadmodules-${STB_PLATFORM}.sh"
 
 INITSCRIPT_NAME = "gigablue-loadmodules"
 INITSCRIPT_PARAMS = "start 01 S ."
@@ -19,5 +19,5 @@ do_compile() {
 
 do_install() {
 	install -d ${D}${sysconfdir}/init.d/
-	install -m 0755 ${WORKDIR}/gigablue-loadmodules-gbmv200.sh ${D}${sysconfdir}/init.d/gigablue-loadmodules
+	install -m 0755 ${WORKDIR}/gigablue-loadmodules-${STB_PLATFORM}.sh ${D}${sysconfdir}/init.d/gigablue-loadmodules
 }

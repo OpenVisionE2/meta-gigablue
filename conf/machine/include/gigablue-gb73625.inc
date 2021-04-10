@@ -18,7 +18,7 @@ MKUBIFS_ARGS = "-m 2048 -e 126976 -c 4096"
 UBINIZE_ARGS = "-m 2048 -p 128KiB"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-	gigablue-dvb-modules-gb73625 \
+	gigablue-dvb-modules-${STB_PLATFORM} \
 	"
 
 DVBMEDIASINK_CONFIG = "--with-wmv --with-wma --with-pcm --with-dts --with-eac3 --with-amr --with-h265 --with-vb6 --with-vb8 --with-spark"

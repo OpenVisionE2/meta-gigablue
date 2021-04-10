@@ -1,7 +1,5 @@
 require bluetoothsetup.inc
 
-GBPLATFORM = "gb7252"
-
 SRCDATE = "20190502"
 SRCDATE_PR = "r1"
 

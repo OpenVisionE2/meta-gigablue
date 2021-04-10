@@ -1,7 +1,5 @@
 require gigablue-platform-util.inc
 
-GBPLATFORM = "gb72604"
-
 SRCDATE = "20200723.r1"
 
 SRC_URI[md5sum] = "ac53b8716adb3e7700fbc41e6a19fbf9"

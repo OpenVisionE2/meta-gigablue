@@ -34,7 +34,7 @@ IMAGE_CMD_tar_prepend = "\
 	"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-	gigablue-platform-util-gb72604 \
+	gigablue-platform-util-${STB_PLATFORM} \
 	gigablue-ddbootup \
 	gigablue-swapcreate \
 	"
@@ -44,7 +44,7 @@ EXTRA_IMAGEDEPENDS += "\
 	"
 
 IMAGE_INSTALL_append = " \
-	bluetoothsetup-gb72604 \
+	bluetoothsetup-${STB_PLATFORM} \
 	"
 
 STB_PLATFORM = "gb72604"
