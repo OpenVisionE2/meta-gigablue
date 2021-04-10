@@ -18,6 +18,6 @@ do_compile() {
 }
 
 do_install() {
-    install -d ${D}${sysconfdir}/init.d/
-    install -m 0755 ${WORKDIR}/gigablue-libreader-${MACHINE}.sh ${D}${sysconfdir}/init.d/gigablue-libreader
+    install -d ${D}${INIT_D_DIR}/
+    install -m 0755 ${WORKDIR}/gigablue-libreader-${MACHINE}.sh ${D}${INIT_D_DIR}/gigablue-libreader
 }
