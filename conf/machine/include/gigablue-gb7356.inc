@@ -6,7 +6,6 @@ require gigablue-mips.inc
 
 MACHINE_FEATURES += "gigabluelcd blindscan-dvbc transcoding ci osdanimation blindscan-dvbs wol YUV RCA"
 
-DVBSKYPROVIDER = "kernel"
 
 PREFERRED_VERSION_linux-gigablue = "${KERNELVERSION}"
 

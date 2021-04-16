@@ -9,7 +9,6 @@ MACHINE_FEATURES += "videoenhancement wol osdanimation"
 # Broken bootloader can only flash around 100 MB
 FLASHSIZE = "96"
 
-DVBSKYPROVIDER = "kernel"
 
 PREFERRED_VERSION_linux-gigablue = "${KERNELVERSION}"
 

@@ -2,7 +2,6 @@ require conf/machine/include/gigablue-arm.inc
 
 KERNELVERSION = "4.1.20"
 
-DVBSKYPROVIDER = "kernel"
 
 MACHINE_FEATURES += "colorlcd gigabluelcd gigabluelcd220 ci blindscan-dvbs blindscan-dvbc transcoding dvb-c mountboot bluetooth"
 
