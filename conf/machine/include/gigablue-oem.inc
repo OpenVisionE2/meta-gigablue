@@ -17,7 +17,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	${@bb.utils.contains("MACHINE_FEATURES", "hisi", "" , "gigablue-cfe", d)} \
 	"
 
-DVBPROVIDER = "kernel"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-gigablue"
 
