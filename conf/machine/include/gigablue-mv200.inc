@@ -16,7 +16,8 @@ CHIPSET = "Hi3798Mv200"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gigablue-dvb-modules-${MACHINE} \
-	gigablue-loadmodules-${STB_PLATFORM} \ 
+	gigablue-loadmodules-${STB_PLATFORM} \
+	gigablue-opengl-${STB_PLATFORM} \
 	gigablue-libs-${STB_PLATFORM} \
 	gigablue-hihalt-${STB_PLATFORM} \
 	gigablue-reader-${MACHINE} \
@@ -38,6 +39,9 @@ TARGET_ARCH = "arm"
 DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 
 PREFERRED_VERSION_linux-gigablue = "${KERNELVERSION}"
+PREFERRED_PROVIDER_virtual/egl = "gigablue-opengl-${STB_PLATFORM}" 
+PREFERRED_PROVIDER_virtual/libgles1 = "gigablue-opengl-${STB_PLATFORM}"
+PREFERRED_PROVIDER_virtual/libgles2 = "gigablue-opengl-${STB_PLATFORM}"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "gigablue-blindscan-${STB_PLATFORM}"
 PREFERRED_RPROVIDER_showiframe = "gigablue-showiframe-${STB_PLATFORM}"
 PREFERRED_RPROVIDER_aio-grab = "gigablue-grab-${STB_PLATFORM}"

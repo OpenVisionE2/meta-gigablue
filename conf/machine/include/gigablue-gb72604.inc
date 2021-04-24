@@ -1,16 +1,10 @@
 require conf/machine/include/gigablue-arm.inc
 
-KERNELVERSION = "4.1.20"
-
-
-MACHINE_FEATURES += "colorlcd gigabluelcd gigabluelcd220 ci blindscan-dvbs blindscan-dvbc transcoding dvb-c mountboot bluetooth"
+MACHINE_FEATURES += "gigabluelcd220"
 
 SOC_FAMILY = "bcm72604"
 
 SRCDATE_BOLT = "20190926"
-
-PREFERRED_VERSION_linux-gigablue = "${KERNELVERSION}"
-PREFERRED_PROVIDER_virtual/kernel = "linux-gigablue"
 
 IMAGE_CMD_tar_prepend = "\
 	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
@@ -30,20 +24,6 @@ IMAGE_CMD_tar_prepend = "\
 	zip ${IMAGE_NAME}_usb.zip ${IMAGEDIR}/*; \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.tar.bz2; \
 	rm -Rf gigablue; \
-	"
-
-MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-	gigablue-platform-util-${STB_PLATFORM} \
-	gigablue-ddbootup \
-	gigablue-swapcreate \
-	"
-
-EXTRA_IMAGEDEPENDS += "\
-	gigablue-initrd-cfe-${MACHINE} \
-	"
-
-IMAGE_INSTALL_append = " \
-	bluetoothsetup-${STB_PLATFORM} \
 	"
 
 STB_PLATFORM = "gb72604"

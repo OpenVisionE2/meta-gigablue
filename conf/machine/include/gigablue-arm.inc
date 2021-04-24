@@ -19,8 +19,30 @@ PREFERRED_PROVIDER_virtual/blindscan-dvbs = "gigablue-blindscan-utils-arm"
 
 require conf/machine/include/soc-family.inc
 
-MACHINE_FEATURES += "mmc emmc swap"
+MACHINE_FEATURES += "mmc emmc swap bluetooth mountboot dvb-c transcoding ci blindscan-dvbs blindscan-dvbc colorlcd gigabluelcd"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	${@bb.utils.contains('MACHINE_FEATURES', 'swap', 'gigablue-swapcreate', '',d)} \
+	"
+
+KERNELVERSION = "4.1.20"
+
+PREFERRED_VERSION_linux-gigablue = "${KERNELVERSION}"
+PREFERRED_PROVIDER_virtual/kernel = "linux-gigablue"
+PREFERRED_PROVIDER_virtual/egl = "gb-v3ddriver-${STB_PLATFORM}"
+PREFERRED_PROVIDER_virtual/libgles2 = "gb-v3ddriver-${STB_PLATFORM}"
+
+MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
+	gb-v3ddriver-${STB_PLATFORM} \
+	gigablue-platform-util-${STB_PLATFORM} \
+	gigablue-ddbootup \
+	gigablue-swapcreate \
+	"
+
+EXTRA_IMAGEDEPENDS += "\
+	gigablue-initrd-cfe-${MACHINE} \
+	"
+
+IMAGE_INSTALL_append = " \
+	bluetoothsetup-${STB_PLATFORM} \
 	"
