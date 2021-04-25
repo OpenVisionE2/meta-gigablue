@@ -7,16 +7,15 @@ KERNEL_FILE = "kernel.bin"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gigablue-ddbootup \
-	kernel-module-rtl8192cu \
+	kernel-module-extrawlan-rt8822bu \
+	kernel-module-extrawlan-rt8812au \
+	kernel-module-extrawlan-rtl8192cu \
 	firmware-rtl8192cu \
 	firmware-rtl8192cufw \
 	kernel-module-extrawlan-rtl8192eu \
 	firmware-rtl8192eu \
-	kernel-module-extrawlan-rt8812au \
-	kernel-module-extrawlan-rt8822bu \
 	${@bb.utils.contains("MACHINE_FEATURES", "hisi", "" , "gigablue-cfe", d)} \
 	"
-
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-gigablue"
 
