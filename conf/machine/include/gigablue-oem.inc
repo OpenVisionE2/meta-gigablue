@@ -31,3 +31,5 @@ require conf/machine/include/soc-family.inc
 BLINDSCAN_BINARY = "gigablue_blindscan"
 
 RCNAME ?= "gb0"
+
+REFERRED_PROVIDER_virtual/kodi = "stb-kodi-${STB_PLATFORM}"

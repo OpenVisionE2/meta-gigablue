@@ -29,7 +29,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	${@bb.utils.contains('MACHINE_FEATURES', 'emmc', 'partitions-by-name' , '', d)} \
 	"
 
-MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisil multitranscoding AV_JACK vfdsymbol"
+MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisil multitranscoding AV_JACK vfdsymbol kodi19"
 
 IMAGE_CLASSES  += "gigablue-emmc_image"
 IMAGE_FSTYPES += "gigablueemmc"
@@ -39,9 +39,9 @@ TARGET_ARCH = "arm"
 DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 
 PREFERRED_VERSION_linux-gigablue = "${KERNELVERSION}"
-PREFERRED_PROVIDER_virtual/egl = "gigablue-opengl-${STB_PLATFORM}" 
-PREFERRED_PROVIDER_virtual/libgles1 = "gigablue-opengl-${STB_PLATFORM}"
-PREFERRED_PROVIDER_virtual/libgles2 = "gigablue-opengl-${STB_PLATFORM}"
+PREFERRED_PROVIDER_virtual/egl ?= "gigablue-opengl-${STB_PLATFORM}" 
+PREFERRED_PROVIDER_virtual/libgles1 ?= "gigablue-opengl-${STB_PLATFORM}"
+PREFERRED_PROVIDER_virtual/libgles2 ?= "gigablue-opengl-${STB_PLATFORM}"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "gigablue-blindscan-${STB_PLATFORM}"
 PREFERRED_RPROVIDER_showiframe = "gigablue-showiframe-${STB_PLATFORM}"
 PREFERRED_RPROVIDER_aio-grab = "gigablue-grab-${STB_PLATFORM}"
